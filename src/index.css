@@ -11,3 +11,252 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#hero {
+  width: 100%;
+  height: 50vh;
+  background: url("/public/images/Banner_Vaquilla.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h3 {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+  border-radius: 50px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #e43c5c;
+  border: 2px solid #e43c5c;
+}
+
+@media (min-width: 576px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-width: 981px) {
+  #hero {
+    width: 100%;
+    max-height: 20vh;
+    background: url("/public/images/Banner_Vaquilla.jpg") top center;
+    background-size: cover;
+    position: relative;
+  }
+
+  #hero h3 {
+    font-size: 22px;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+    
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 576px) {
+  #hero {
+    height: 15vh;
+  }
+}
+
+/*--------------------------------------------------------------
+  Navbar
+--------------------------------------------------------------*/
+  
+#Logo {
+  max-height: 8vh;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------------------
+  Scrollspy
+--------------------------------------------------------------*/
+html {
+  scroll-padding-top: 13vh; /* height of sticky header */
+}
+
+@media (max-width: 576px) {
+  html {
+    scroll-padding-top: 50vh; /* height of sticky header */
+  }
+}
+
+/*--------------------------------------------------------------
+  Sections
+--------------------------------------------------------------*/
+.float-start {
+  margin-right: 2vh;
+  max-width: 50%;
+}
+
+.float-end {
+  margin-left: 2vh;
+  max-width: 50%;
+}
+
+.figure-middle img {
+  object-fit: contain;
+  object-position: center;
+  overflow: hidden;
+  max-width: 75%;
+}
+
+.enlace-medios {
+  color: #e43c5c;
+}
+
+.enlace-medios:hover {
+  color: #ff002f;
+}
+
+/*--------------------------------------------------------------
+  Carousel fixed
+--------------------------------------------------------------*/
+#carouselVaquilla {
+  margin-bottom: 2vh;
+}
+
+#carouselGalery .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height: 80vh;
+}
+
+#carouselGalery .carousel-item:before {
+  content: "";
+  background-image: 
+    linear-gradient(
+      to bottom,
+      transparent, rgba(0, 0, 0, 0.5)
+    );
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 576px) {
+  #container-sections {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselGalery .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 30vh;
+  }
+}
+
+/*--------------------------------------------------------------
+  Dummy devices (replace them with your own or something else entirely!)
+--------------------------------------------------------------*/
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+/*--------------------------------------------------------------
+  Extra utilities
+--------------------------------------------------------------*/
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 576px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
