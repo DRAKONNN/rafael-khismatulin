@@ -4,11 +4,10 @@ import { Button } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Clarence Taylor</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" /></span>
+                <img class="img-fluid img-profile rounded mx-auto mb-2" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -27,17 +26,22 @@ function App() {
             
             <section class="resume-section" id="acercade">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">RAFAEL <span class="text-primary">KHISMATULIN</span></h1>
+                    <h1 class="mb-0">RAFAEL <span class="text-danger">KHISMATULIN</span></h1>
                     <div class="subheading mb-5">
-                        3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-                        <a href="mailto:name@email.com">name@email.com</a>
+                        Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 ·
+                        <a href="mailto:name@email.com">rafakhis14@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">I am experienciad in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p class="lead mb-5">Especializado en el desarrollo de aplicaciones móviles y web. 
+                      Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
+                      Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y APIs estableciendo conexiones entre la Base de Datos del servidor y la propia app.
+                      Desarrollo y mantenimiento de páginas web oficiales del Ayuntamiento de Pedrezuela con Bootstrap 5.
+                      En este momento, interesado en masterizar la programación de React.js
+                    </p>
                     <div class="social-icons">
-                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon nav-link" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon nav-link" href="https://github.com/DRAKONNN"><i class="fab fa-github"></i></a>
+                        <a class="social-icon nav-link disabled" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon nav-link disabled" href="#!"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </section>
