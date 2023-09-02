@@ -15,7 +15,7 @@ export default [{
 }, {
   id: 'fct02', 
   title: 'FCT Desarrollador de Aplicaciones Móviles',
-  company: 'KUBUS',
+  company: 'KUBUS S.A.',
   description: 'Desarrollador de una aplicación móvil de pedidos y APIs.',
   commencement: 'Abril 2021',
   termination: 'Junio 2021',

@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
-import experiences from './dataexperience';
+import experiences from './dataexperiences';
+import educations from './dataeducations';
 import { useState } from 'react';
 
 const EXPERIENCES = experiences;
+const EDUCATIONS = educations;
 
 function Experience(props) {
   const {experience} = props
@@ -33,10 +35,37 @@ function ExperienceList(props) {
   )
 }
 
+function Education(props) {
+  const {education} = props
+
+  return (
+    <div key={education.id} class="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="flex-grow-1">
+          <h3 class="mb-0">{education.title}</h3>
+          <div class="subheading mb-3">{education.school}</div>
+      </div>
+      <div class="flex-shrink-0"><span class="text-primary">{education.commencement} - {education.termination}</span></div>
+    </div>
+  )
+}
+
+function EducationList(props) {
+  const {educations} = props
+
+  return (
+    <>
+      {educations.map(education => (
+        <Education education={education} />
+      ))}
+    </>
+  )
+}
+
 function App() {
 
   const [state, setState] = useState({
-    experiences: EXPERIENCES
+    experiences: EXPERIENCES,
+    educations: EDUCATIONS
   })
 
   return (
@@ -64,8 +93,7 @@ function App() {
                 <div class="resume-section-content">
                     <h1 class="mb-0">RAFAEL <span class="text-danger">KHISMATULIN</span></h1>
                     <div class="subheading mb-5">
-                        Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 ·
-                        <a href="mailto:name@email.com">rafakhis14@gmail.com</a>
+                        Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:name@email.com">rafakhis14@gmail.com</a>
                     </div>
                     <p class="lead mb-5">Especializado en el desarrollo de aplicaciones móviles y web. 
                       Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
@@ -94,23 +122,7 @@ function App() {
             <section class="resume-section" id="estudios">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Estudios</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of Colorado Boulder</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Computer Science - Web Development Track</div>
-                            <p>GPA: 3.23</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">James Buchanan High School</h3>
-                            <div class="subheading mb-3">Technology Magnet Program</div>
-                            <p>GPA: 3.56</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
-                    </div>
+                    <EducationList educations={state.educations} />
                 </div>
             </section>
             <hr class="m-0" />
