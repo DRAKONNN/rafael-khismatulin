@@ -148,7 +148,7 @@ function App() {
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            Mobile-First, Responsive
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
