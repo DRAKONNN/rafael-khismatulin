@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import experiences from './dataexperiences';
 import educations from './dataeducations';
 import interests from './datainterests';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const EXPERIENCES = experiences;
 const EDUCATIONS = educations;
@@ -63,47 +63,6 @@ function EducationList(props) {
   )
 }
 
-function Interest(props) {
-  const {interest} = props
-  const isRowReversed = props.index % 2 !== 0;
-
-  console.log(isRowReversed);
-  if (isRowReversed) {
-    return (
-      <>
-        <div className="col-lg-6 flex-row">
-          <h3>{interest.title}</h3>
-          <p>{interest.description}</p>
-        </div>
-        <div className="col-lg-6">
-        </div>
-      </>
-    )
-  }
-  return (
-    <>
-      <div className="col-lg-6">
-      </div>
-      <div className="col-lg-6 flex-row-reverse">
-        <h3>{interest.title}</h3>
-        <p>{interest.description}</p>
-      </div>
-    </>
-  )
-}
-
-function InterestList(props) {
-  const {interests} = props
-
-  return (
-    <>
-      {interests.map(interest => (
-        <Interest interest={interest} />
-      ))}
-    </>
-  )
-}
-
 function App() {
 
   const [state, setState] = useState({
@@ -111,6 +70,67 @@ function App() {
     educations: EDUCATIONS,
     interests: INTERESTS
   })
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  // Función para actualizar el tamaño de la pantalla
+  const updateWindowSize = () => {
+    setWindowSize(window.innerWidth);
+  };
+
+  // Usa useEffect para suscribirte al evento de cambio de tamaño de la ventana
+  useEffect(() => {
+    window.addEventListener('resize', updateWindowSize);
+
+    // Limpia la suscripción cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', updateWindowSize);
+    };
+  }, []);
+
+  // Define una función para determinar el diseño de los elementos en función del tamaño de la pantalla
+  const getLayout = (interest, index) => {
+    const reverse = index % 2 === 1;
+    if (windowSize <= 768) {
+      // Para pantallas pequeñas, simplemente muestra los elementos en su orden original
+      return (
+        <>
+            <div className="col-lg-6 flex-row" key={index}>
+              <h3>{interest.title}</h3>
+              <p>{interest.description}</p>
+            </div>
+            <div className="col-lg-6">
+              <i className="fab fa-java"></i>
+            </div>
+          </>
+      );
+    } else {
+      // Para pantallas más grandes, cambia el diseño dependiendo de si es par o impar
+      if (reverse) {
+        return (
+          <>
+            <div className="col-lg-6 flex-row" key={index}>
+              <h3>{interest.title}</h3>
+              <p>{interest.description}</p>
+            </div>
+            <div className="col-lg-6">
+              <i className="fab fa-java"></i>
+            </div>
+          </>
+        );
+      } else {
+        return (
+          <>
+            <div className="col-lg-6"></div>
+            <div className="col-lg-6 flex-row-reverse" key={index}>
+              <h3>{interest.title}</h3>
+              <p>{interest.description}</p>
+            </div>
+          </>
+        );
+      }
+    }
+  };
 
   return (
     <div>
@@ -235,19 +255,34 @@ function App() {
           <div className="resume-section-content">
             <h1 className="mb-5">Aficiones</h1>
             <div className="row row-cols-1 gy-5">
-              <InterestList interests={state.interests} />
+              {/* {interests.map((interest, index) => getLayout(index))} */}
               {interests.map((interest, index) => {
                 const reverse = index % 2 === 1;
-                return (
-                  <>
-                    <div className={`col-lg-6 ${reverse ? 'flex-row-reverse' : 'flex-row'}`} key={index}>
-                      <h3>{interest.title}</h3>
-                      <p>{interest.description}</p>
-                    </div>
-                    <div className="col-lg-6">
-                    </div>
-                  </>
-                )
+                if (reverse) {
+                  return (
+                    <>
+                      <div className="col-lg-6">
+                        <i className="fab fa-java"></i>
+                      </div>
+                      <div className="col-lg-6 flex-row-reverse" key={index}>
+                        <h3>{interest.title}</h3>
+                        <p>{interest.description}</p>
+                      </div>
+                    </>
+                  )
+                } else {
+                  return (
+                    <>
+                      <div className="col-lg-6 flex-row" key={index}>
+                        <h3>{interest.title}</h3>
+                        <p>{interest.description}</p>
+                      </div>
+                      <div className="col-lg-6">
+                        <i className="fab fa-java"></i>
+                      </div>
+                    </>
+                  )
+                }
               })}
             </div>
           </div>

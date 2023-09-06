@@ -191,7 +191,7 @@ p.lead {
   }
 }
 
-@media (max-width: 1126px) {
+@media (max-width: 992px) {
   #sideNav .navbar-brand .img-profile {
     max-width: 3rem;
     max-height: 3rem;
