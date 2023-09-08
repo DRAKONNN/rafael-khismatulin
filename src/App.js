@@ -155,14 +155,13 @@ function App() {
           
         <section className="resume-section" id="acercade">
           <div className="resume-section-content">
-            <h1 className="mb-0">RAFAEL <span className="text-danger">KHISMATULIN</span></h1>
+            <h1 className="mb-0">RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
             <div className="subheading mb-5">
               Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:name@email.com">rafakhis14@gmail.com</a>
             </div>
             <p className="lead mb-5">Especializado en el desarrollo de aplicaciones móviles y web. 
               Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
-              Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y APIs estableciendo conexiones entre la Base de Datos del servidor y la propia app.
-              Desarrollo y mantenimiento de páginas web oficiales del Ayuntamiento de Pedrezuela con Bootstrap 5.
+              Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y páginas web en React-Bootstrap.
               En este momento, interesado en masterizar la programación de React.js
             </p>
             <div className="social-icons">
