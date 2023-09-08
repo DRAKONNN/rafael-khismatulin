@@ -63,6 +63,7 @@ function EducationList(props) {
   )
 }
 
+
 function App() {
 
   const [state, setState] = useState({
@@ -260,10 +261,10 @@ function App() {
                 if (reverse) {
                   return (
                     <>
-                      <div className="col-lg-6 interests-icons">
+                      <div className="col-lg-6 interests-icons bg-info rounded-start">
                         <i className={`${interest.image}`}></i>
                       </div>
-                      <div className="col-lg-6 flex-row-reverse" key={index}>
+                      <div className="col-lg-6 flex-row-reverse bg-info rounded-end" key={index}>
                         <h3>{interest.title}</h3>
                         <p>{interest.description}</p>
                       </div>
