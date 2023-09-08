@@ -141,12 +141,12 @@ function App() {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#acercade">Acerca de</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#experiencia">Experiencia</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#estudios">Estudios</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#habilidades">Habilidades</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#proyectos">Proyectos</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#aficiones">Aficiones</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
           </ul>
         </div>
       </nav>
@@ -260,8 +260,8 @@ function App() {
                 if (reverse) {
                   return (
                     <>
-                      <div className="col-lg-6">
-                        <i className="fab fa-java"></i>
+                      <div className="col-lg-6 interests-icons">
+                        <i className={`${interest.image}`}></i>
                       </div>
                       <div className="col-lg-6 flex-row-reverse" key={index}>
                         <h3>{interest.title}</h3>
@@ -276,8 +276,8 @@ function App() {
                         <h3>{interest.title}</h3>
                         <p>{interest.description}</p>
                       </div>
-                      <div className="col-lg-6">
-                        <i className="fab fa-java"></i>
+                      <div className="col-lg-6 interests-icons">
+                        <i className={`${interest.image}`}></i>
                       </div>
                     </>
                   )

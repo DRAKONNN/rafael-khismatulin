@@ -143,6 +143,7 @@ p.lead {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  color: #dfdfdf;
 }
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
@@ -219,6 +220,10 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+}
+
+.interests-icons {
+  font-size: 8rem;
 }
 
 section.resume-section {
