@@ -261,11 +261,11 @@ function App() {
                 if (reverse) {
                   return (
                     <>
-                      <div className="col-lg-6 interests-icons bg-info rounded-start">
-                        <i className={`${interest.image}`}></i>
+                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-start`}>
+                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
                       </div>
-                      <div className="col-lg-6 flex-row-reverse bg-info rounded-end" key={index}>
-                        <h3>{interest.title}</h3>
+                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-end`} key={index}>
+                        <h3 className={interest.classAttColor}>{interest.title}</h3>
                         <p>{interest.description}</p>
                       </div>
                     </>
@@ -273,12 +273,12 @@ function App() {
                 } else {
                   return (
                     <>
-                      <div className="col-lg-6 flex-row" key={index}>
-                        <h3>{interest.title}</h3>
+                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
+                        <h3 className={interest.classAttColor}>{interest.title}</h3>
                         <p>{interest.description}</p>
                       </div>
-                      <div className="col-lg-6 interests-icons">
-                        <i className={`${interest.image}`}></i>
+                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
+                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
                       </div>
                     </>
                   )

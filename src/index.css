@@ -232,6 +232,60 @@ p.lead {
   font-size: 8rem;
 }
 
+
+/*
+* ===== Backgrounds =====
+*/
+.bg-informatics-text {
+  background-color: rgb(238, 241, 174);
+}
+
+.bg-informatics-image {
+  background-color: rgb(230, 238, 77);
+}
+
+.bg-cinema-text {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+}
+
+.bg-cinema-image {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-videogames-text {
+  background-color: rgb(146, 224, 248);
+}
+
+.bg-videogames-image {
+  background-color: rgb(77, 200, 238);
+}
+
+.bg-geek-text {
+  background-color: rgb(235, 162, 250);
+}
+
+.bg-geek-image {
+  background-color: rgb(211, 77, 238);
+}
+
+.bg-nature-text {
+  background-color: rgb(147, 253, 164);
+}
+
+.bg-nature-image {
+  background-color: rgb(77, 238, 104);
+}
+
+.bg-time-text {
+  background-color: rgb(252, 167, 185);
+}
+
+.bg-time-image {
+  background-color: rgb(250, 64, 104);
+}
+
+
 section.resume-section {
   display: flex;
   align-items: center;
