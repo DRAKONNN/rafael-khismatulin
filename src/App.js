@@ -98,66 +98,6 @@ function App() {
   })
 
   const isBreakpoint = useMediaQuery(768);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-  // Función para actualizar el tamaño de la pantalla
-  const updateWindowSize = () => {
-    setWindowSize(window.innerWidth);
-  };
-
-  // Usa useEffect para suscribirte al evento de cambio de tamaño de la ventana
-  useEffect(() => {
-    window.addEventListener('resize', updateWindowSize);
-
-    // Limpia la suscripción cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('resize', updateWindowSize);
-    };
-  }, []);
-
-  // Define una función para determinar el diseño de los elementos en función del tamaño de la pantalla
-  const getLayout = (interest, index) => {
-    const reverse = index % 2 === 1;
-    if (windowSize <= 768) {
-      // Para pantallas pequeñas, simplemente muestra los elementos en su orden original
-      return (
-        <>
-            <div className="col-lg-6 flex-row" key={index}>
-              <h3>{interest.title}</h3>
-              <p>{interest.description}</p>
-            </div>
-            <div className="col-lg-6">
-              <i className="fab fa-java"></i>
-            </div>
-          </>
-      );
-    } else {
-      // Para pantallas más grandes, cambia el diseño dependiendo de si es par o impar
-      if (reverse) {
-        return (
-          <>
-            <div className="col-lg-6 flex-row" key={index}>
-              <h3>{interest.title}</h3>
-              <p>{interest.description}</p>
-            </div>
-            <div className="col-lg-6">
-              <i className="fab fa-java"></i>
-            </div>
-          </>
-        );
-      } else {
-        return (
-          <>
-            <div className="col-lg-6"></div>
-            <div className="col-lg-6 flex-row-reverse" key={index}>
-              <h3>{interest.title}</h3>
-              <p>{interest.description}</p>
-            </div>
-          </>
-        );
-      }
-    }
-  };
 
   return (
     <div>
@@ -281,75 +221,49 @@ function App() {
           <div className="resume-section-content">
             <h1 className="mb-5">Aficiones</h1>
             <div className="row row-cols-1 gy-5">
-              {/* {interests.map((interest, index) => getLayout(index))} */}
               {interests.map((interest, index) => {
                 const reverse = index % 2 === 1;
-                if (reverse) {
-                  return (
-                    <>
-                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-start`}>
-                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                      </div>
-                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-end`} key={index}>
-                        <h3 className={interest.classAttColor}>{interest.title}</h3>
-                        <p>{interest.description}</p>
-                      </div>
-                    </>
-                  )
-                } else {
-                  return (
-                    <>
-                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
-                        <h3 className={interest.classAttColor}>{interest.title}</h3>
-                        <p>{interest.description}</p>
-                      </div>
-                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
-                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                      </div>
-                    </>
-                  )
-                }
+                return (
+                  <>
+                    {isBreakpoint ? (
+                      <>
+                        <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
+                          <h3 className={interest.classAttColor}>{interest.title}</h3>
+                          <p>{interest.description}</p>
+                        </div>
+                        <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
+                          <i className={`${interest.image} ${interest.classAttColor}`}></i>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {reverse ? (
+                          <>
+                            <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-start`}>
+                              <i className={`${interest.image} ${interest.classAttColor}`}></i>
+                            </div>
+                            <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-end`} key={index}>
+                              <h3 className={interest.classAttColor}>{interest.title}</h3>
+                              <p>{interest.description}</p>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
+                              <h3 className={interest.classAttColor}>{interest.title}</h3>
+                              <p>{interest.description}</p>
+                            </div>
+                            <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
+                              <i className={`${interest.image} ${interest.classAttColor}`}></i>
+                            </div>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </>
+                )
               })}
-              {/*{ isBreakpoint ? (
-
-                <>
-                  <div className="col-lg-6 flex-row" key={index}>
-                    <h3>{interest.title}</h3>
-                    <p>{interest.description}</p>
-                  </div>
-                  <div className="col-lg-6">
-                    <i className="fab fa-java"></i>
-                  </div>
-                </>
-              ) : (
-                const reverse = index % 2 === 1;
-                if (reverse) {
-                  return (
-                    <>
-                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-start`}>
-                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                      </div>
-                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-end`} key={index}>
-                        <h3 className={interest.classAttColor}>{interest.title}</h3>
-                        <p>{interest.description}</p>
-                      </div>
-                    </>
-                  )
-                } else {
-                  return (
-                    <>
-                      <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
-                        <h3 className={interest.classAttColor}>{interest.title}</h3>
-                        <p>{interest.description}</p>
-                      </div>
-                      <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
-                        <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                      </div>
-                    </>
-                  )
-                }
-              )
-              )}*/}
+              
             </div>
           </div>
         </section>
