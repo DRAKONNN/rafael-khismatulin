@@ -7,6 +7,7 @@ export default [{
   urlGitHub: 'https://github.com/DRAKONNN/stacko',
   url: 'https://stackoproject.netlify.app/',
   classAttBackgroundText: 'bg-primary text-white',
+  classAttButton: 'btn-dark text-white',
 }, {
   id: 'agz27', 
   title: "Arganzuela 27",
@@ -15,5 +16,6 @@ export default [{
   development: 'Desarrollada en: Android Studio, PHP y SQL',
   urlGitHub: 'https://github.com/DRAKONNN',
   url: 'https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz',
-  classAttBackgroundText: 'bg-purple-agz text-white',
+  classAttBackgroundText: 'bg-dark text-white',
+  classAttButton: 'btn-light text-dark',
 }];

@@ -72,16 +72,16 @@ function Project(props) {
   return (
     <div className="col-lg-6">
       <div className="card">
-        <img src={project.image} className="card-img-top" alt={project.title}/>
-        <div className={`card-body ${project.classAttBackgroundText}`}>
+        <a href={project.url}><img src={project.image} className="card-img-top" alt={project.title}/></a>
+        <div className={`card-body ${project.classAttBackgroundText} bg-gradient`}>
           <h5 className="card-title">{project.title}</h5>
           <p className="card-text">{project.description}</p>
         </div>
         <ul className="list-group list-group-flush">
-          <li className={`list-group-item ${project.classAttBackgroundText}`}>{project.development}</li>
-          <li className={`list-group-item bg-geek-image`}>
-            <a href={project.urlGitHub} className="btn btn-dark me-2"><i className="fab fa-github"></i> GitHub</a>
-            <a href={project.url} className="btn btn-dark"><i className="fa fa-external-link"></i> URL</a>
+          <li className={`list-group-item ${project.classAttBackgroundText} bg-gradient`}>{project.development}</li>
+          <li className={`list-group-item ${project.classAttBackgroundText} bg-gradient`}>
+            <a href={project.urlGitHub} className={`btn ${project.classAttButton} me-2`}><i className="fab fa-github"></i> GitHub</a>
+            <a href={project.url} className={`btn btn-light text-dark ${project.classAttButton}`}><i className="fa fa-external-link"></i> URL</a>
           </li>
         </ul>
       </div>
