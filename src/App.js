@@ -233,16 +233,24 @@ function App() {
           <Section>
             <div className="resume-section-content">
               <h1 className="mb-5">Proyectos</h1>
-              <ul className="fa-ul mb-0">
-                <li>
-                  <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                  Google Analytics Certified Developer
-                </li>
-                <li>
-                  <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                  Mobile Web Specialist - Google Certification
-                </li>
-              </ul>
+              <div id="row-characters" class="row gy-5">
+                <div className="col-lg-6">
+                  <div className="card">
+                  <img src="/images/projects/StackoLinkedin.png" className="card-img-top" alt="STACK'O"/>
+                  <div className="card-body bg-primary text-white">
+                    <h5 className="card-title">STACK'O</h5>
+                    <p className="card-text">Proyecto personal de una página web para filtrar diferentes juegos de cartas dependiendo del filtro que se necesite.</p>
+                  </div>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item bg-primary text-white">Desarrollada en: React y Bootstrap 5</li>
+                    <li className="list-group-item bg-primary text-white">
+                      <a href="https://github.com/DRAKONNN/stacko" class="btn btn-dark me-2"><i className="fab fa-github"></i> GitHub</a>
+                      <a href="https://stackoproject.netlify.app/" class="btn btn-dark"><i className="fa fa-external-link"></i> URL</a>
+                    </li>
+                  </ul> 
+                  </div>
+                </div>
+              </div>
             </div>
           </Section>
         </section>
