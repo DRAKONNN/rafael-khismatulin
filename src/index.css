@@ -285,6 +285,10 @@ p.lead {
   background-color: rgb(250, 64, 104);
 }
 
+.bg-purple-agz {
+  background-color: purple;
+}
+
 
 section.resume-section {
   display: flex;

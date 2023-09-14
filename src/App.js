@@ -4,12 +4,14 @@ import { Button } from 'react-bootstrap';
 import experiences from './dataexperiences';
 import educations from './dataeducations';
 import interests from './datainterests';
+import projects from './dataprojects';
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useAnimation } from 'framer-motion';
 
 const EXPERIENCES = experiences;
 const EDUCATIONS = educations;
 const INTERESTS = interests;
+const PROJECTS = projects;
 
 function Experience(props) {
   const {experience} = props
@@ -59,6 +61,41 @@ function EducationList(props) {
     <>
       {educations.map(education => (
         <Education education={education} />
+      ))}
+    </>
+  )
+}
+
+function Project(props) {
+  const {project} = props
+
+  return (
+    <div className="col-lg-6">
+      <div className="card">
+        <img src={project.image} className="card-img-top" alt={project.title}/>
+        <div className={`card-body ${project.classAttBackgroundText}`}>
+          <h5 className="card-title">{project.title}</h5>
+          <p className="card-text">{project.description}</p>
+        </div>
+        <ul className="list-group list-group-flush">
+          <li className={`list-group-item ${project.classAttBackgroundText}`}>{project.development}</li>
+          <li className={`list-group-item bg-geek-image`}>
+            <a href={project.urlGitHub} className="btn btn-dark me-2"><i className="fab fa-github"></i> GitHub</a>
+            <a href={project.url} className="btn btn-dark"><i className="fa fa-external-link"></i> URL</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+function ProjectList(props) {
+  const {projects} = props
+
+  return (
+    <>
+      {projects.map(project => (
+        <Project project={project} />
       ))}
     </>
   )
@@ -114,7 +151,8 @@ function App() {
   const [state, setState] = useState({
     experiences: EXPERIENCES,
     educations: EDUCATIONS,
-    interests: INTERESTS
+    interests: INTERESTS,
+    projects: PROJECTS
   })
 
   const isBreakpoint = useMediaQuery(768);
@@ -234,22 +272,7 @@ function App() {
             <div className="resume-section-content">
               <h1 className="mb-5">Proyectos</h1>
               <div id="row-characters" class="row gy-5">
-                <div className="col-lg-6">
-                  <div className="card">
-                  <img src="/images/projects/StackoLinkedin.png" className="card-img-top" alt="STACK'O"/>
-                  <div className="card-body bg-primary text-white">
-                    <h5 className="card-title">STACK'O</h5>
-                    <p className="card-text">Proyecto personal de una página web para filtrar diferentes juegos de cartas dependiendo del filtro que se necesite.</p>
-                  </div>
-                  <ul className="list-group list-group-flush">
-                    <li className="list-group-item bg-primary text-white">Desarrollada en: React y Bootstrap 5</li>
-                    <li className="list-group-item bg-primary text-white">
-                      <a href="https://github.com/DRAKONNN/stacko" class="btn btn-dark me-2"><i className="fab fa-github"></i> GitHub</a>
-                      <a href="https://stackoproject.netlify.app/" class="btn btn-dark"><i className="fa fa-external-link"></i> URL</a>
-                    </li>
-                  </ul> 
-                  </div>
-                </div>
+                <ProjectList projects={state.projects} />
               </div>
             </div>
           </Section>
