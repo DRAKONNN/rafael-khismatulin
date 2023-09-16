@@ -76,13 +76,13 @@ function Skill(props) {
   // Función para cambiar el color del icono al hacer clic
   const handleClick = (e) => {
     e.preventDefault();
-    setIconColor('clicked'); // Cambia el color del icono a rojo al hacer clic (puedes ajustarlo según tus necesidades)
+    setIconColor(`${skill.classAttColor}`); // Cambia el color del icono a rojo al hacer clic (puedes ajustarlo según tus necesidades)
   };
 
   return (
     <li className="list-inline-item">
-      <a className={`a-skills ${iconColor}`} href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title} onClick={handleClick}>
-        <i className={skill.icon}></i>
+      <a className={`a-skills`} href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title} onClick={handleClick}>
+        <i className={`${skill.icon} ${iconColor}`}></i>
       </a>
     </li>
   )

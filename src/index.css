@@ -222,13 +222,11 @@ p.lead {
   color: inherit;
   text-decoration: none;
 }
+
 .a-skills:hover {
   color: grey;
 }
 
-.clicked {
-  color: #ff0000; /* Cambia esto al color deseado */
-}
 .dev-icons {
   font-size: 3rem;
 }
@@ -253,6 +251,49 @@ p.lead {
 
 .img-zoom img:hover {
   transform: scale(1.2);
+}
+
+/*
+* ===== Colors =====
+*/
+.red {
+  color: red;
+}
+
+.ruby {
+  color: rgb(245, 64, 64);
+}
+
+.orange {
+  color: rgb(255, 129, 27);
+}
+
+.yellow {
+  color: rgb(213, 228, 0);
+}
+
+.lime {
+  color: rgb(157, 255, 0);
+}
+
+.forestgreen {
+  color: rgb(0, 202, 17);
+}
+
+.skyblue {
+  color: rgb(0, 180, 224);
+}
+
+.bluelabel {
+  color: rgb(0, 134, 224);
+}
+
+.blue {
+  color: rgb(0, 71, 224);
+}
+
+.brown {
+  color: rgb(145, 133, 70);
 }
 
 /*
