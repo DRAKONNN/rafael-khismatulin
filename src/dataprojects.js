@@ -4,8 +4,8 @@ export default [{
   description: 'Proyecto personal de una página web para filtrar diferentes juegos de cartas dependiendo del filtro que se necesite.',
   image: '/images/projects/StackoLinkedin.png',
   development: 'Desarrollada en: React y Bootstrap 5',
-  urlGitHub: 'https://github.com/DRAKONNN/stacko',
-  url: 'https://stackoproject.netlify.app/',
+  urlGitHub: 'https://github.com/DRAKONNN/STACK-O',
+  url: 'https://stack-o.netlify.app/',
   classAttBackgroundText: 'bg-primary text-white',
   classAttButton: 'btn-dark text-white',
 }, {
