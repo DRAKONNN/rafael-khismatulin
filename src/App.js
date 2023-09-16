@@ -1,17 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
+import { Tooltip } from "bootstrap";
 import experiences from './dataexperiences';
 import educations from './dataeducations';
-import interests from './datainterests';
+import skills from './dataskills';
 import projects from './dataprojects';
+import interests from './datainterests';
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useAnimation } from 'framer-motion';
 
 const EXPERIENCES = experiences;
 const EDUCATIONS = educations;
-const INTERESTS = interests;
+const SKILLS = skills;
 const PROJECTS = projects;
+const INTERESTS = interests;
 
 function Experience(props) {
   const {experience} = props
@@ -61,6 +64,30 @@ function EducationList(props) {
     <>
       {educations.map(education => (
         <Education education={education} />
+      ))}
+    </>
+  )
+}
+
+function Skill(props) {
+  const {skill} = props;
+
+  return (
+    <li className="list-inline-item">
+      <a className="a-skills" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title}>
+        <i className={skill.icon}></i>
+      </a>
+    </li>
+  )
+}
+
+function SkillList(props) {
+  const {skills} = props
+
+  return (
+    <>
+      {skills.map(skill => (
+        <Skill skill={skill} />
       ))}
     </>
   )
@@ -155,8 +182,9 @@ function App() {
   const [state, setState] = useState({
     experiences: EXPERIENCES,
     educations: EDUCATIONS,
-    interests: INTERESTS,
-    projects: PROJECTS
+    skills: SKILLS,
+    projects: PROJECTS,
+    interests: INTERESTS
   })
 
   const isBreakpoint = useMediaQuery(768);
@@ -231,17 +259,7 @@ function App() {
               <h1 className="mb-5">Habilidades</h1>
               <div className="subheading mb-3">Lenguajes de programación y herramientas</div>
               <ul className="list-inline dev-icons">
-                <li className="list-inline-item"><i className="fab fa-java"></i></li>
-                <li className="list-inline-item"><i className="fab fa-android"></i></li>
-                <li className="list-inline-item"><i className="fab fa-html5"></i></li>
-                <li className="list-inline-item"><i className="fab fa-css3-alt"></i></li>
-                <li className="list-inline-item"><i className="fab fa-js-square"></i></li>
-                <li className="list-inline-item"><i className="fab fa-angular"></i></li>
-                <li className="list-inline-item"><i className="fab fa-react"></i></li>
-                <li className="list-inline-item"><i className="fab fa-node-js"></i></li>
-                <li className="list-inline-item"><i className="fab fa-php"></i></li>
-                <li className="list-inline-item"><i className="fab fa-wordpress"></i></li>
-                <li className="list-inline-item"><i className="fab fa-npm"></i></li>
+                <SkillList skills={state.skills} />
               </ul>
               <div className="subheading mb-3">Workflow</div>
               <ul className="fa-ul mb-0">

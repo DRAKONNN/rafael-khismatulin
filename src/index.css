@@ -218,6 +218,14 @@ p.lead {
   background-color: #bd5d38;
 }
 
+.a-skills {
+  color: inherit;
+  text-decoration: none;
+}
+.a-skills:hover {
+  color: grey;
+}
+
 .dev-icons {
   font-size: 3rem;
 }
