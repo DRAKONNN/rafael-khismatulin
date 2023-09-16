@@ -71,10 +71,17 @@ function EducationList(props) {
 
 function Skill(props) {
   const {skill} = props;
+  const [iconColor, setIconColor] = useState('default'); // Estado para controlar el color del icono
+
+  // Función para cambiar el color del icono al hacer clic
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIconColor('clicked'); // Cambia el color del icono a rojo al hacer clic (puedes ajustarlo según tus necesidades)
+  };
 
   return (
     <li className="list-inline-item">
-      <a className="a-skills" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title}>
+      <a className={`a-skills ${iconColor}`} href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title} onClick={handleClick}>
         <i className={skill.icon}></i>
       </a>
     </li>

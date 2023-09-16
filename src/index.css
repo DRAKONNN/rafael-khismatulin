@@ -226,6 +226,9 @@ p.lead {
   color: grey;
 }
 
+.clicked {
+  color: #ff0000; /* Cambia esto al color deseado */
+}
 .dev-icons {
   font-size: 3rem;
 }
