@@ -232,6 +232,17 @@ p.lead {
   font-size: 8rem;
 }
 
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.3s;
+}
+
+.img-zoom img:hover {
+  transform: scale(1.2);
+}
 
 /*
 * ===== Backgrounds =====

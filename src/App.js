@@ -72,7 +72,11 @@ function Project(props) {
   return (
     <div className="col-lg-6">
       <div className="card">
-        <a href={project.url}><img src={project.image} className="card-img-top" alt={project.title}/></a>
+        <div className="img-zoom">
+          <a href={project.url}>
+            <img src={project.image} className="card-img-top" alt={project.title}/>
+          </a>
+        </div>
         <div className={`card-body ${project.classAttBackgroundText} bg-gradient`}>
           <h5 className="card-title">{project.title}</h5>
           <p className="card-text">{project.description}</p>
