@@ -222,7 +222,7 @@ function App() {
             <div className={`resume-section-content`}>
               <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
               <div className="subheading mb-5">
-                Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:name@email.com">rafakhis14@gmail.com</a>
+                Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
               </div>
               <p className="lead mb-5" >Especializado en el desarrollo de aplicaciones móviles y web. 
                 Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
