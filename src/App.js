@@ -7,6 +7,12 @@ import educations from './dataeducations';
 import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useAnimation } from 'framer-motion';
 
@@ -20,13 +26,20 @@ function Experience(props) {
   const {experience} = props
 
   return (
+    
     <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
-      <div className="flex-grow-1">
-          <h3 className="mb-0">{experience.title}</h3>
-          <div className="subheading mb-3">{experience.company}</div>
-          <p>{experience.description}</p>
-      </div>
-      <div className="flex-shrink-0"><span className="text-primary">{experience.commencement} - {experience.termination}</span></div>
+        <TimelineSeparator className='me-3'>
+          <TimelineDot variant="outlined" color="secondary" />
+          <TimelineConnector style={{ background: '#854CE6' }} />
+        </TimelineSeparator> 
+        <div className="flex-grow-1">
+            <h3 className="mb-0">{experience.title}</h3>
+            <div className="subheading mb-3">{experience.company}</div>
+            <p>{experience.description}</p>
+        </div>
+        <div className="flex-shrink-0">
+          <span className="text-primary">{experience.commencement} &ndash; {experience.termination}</span>
+        </div>
     </div>
   )
 }
@@ -48,11 +61,17 @@ function Education(props) {
 
   return (
     <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <TimelineSeparator className='me-3'>
+        <TimelineDot variant="outlined" color="secondary" />
+        <TimelineConnector style={{ background: '#854CE6' }} />
+      </TimelineSeparator> 
       <div className="flex-grow-1">
           <h3 className="mb-0">{education.title}</h3>
           <div className="subheading mb-3">{education.school}</div>
       </div>
-      <div className="flex-shrink-0"><span className="text-primary">{education.commencement} - {education.termination}</span></div>
+      <div className="flex-shrink-0">
+        <span className="text-primary">{education.commencement} &ndash; {education.termination}</span>
+      </div>
     </div>
   )
 }
@@ -200,7 +219,9 @@ function App() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
-          <img className="img-fluid img-profile rounded mx-auto mb-2" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+          <div className="img-zoom img-profile rounded mx-auto mb-2">
+          <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+          </div>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -242,7 +263,7 @@ function App() {
           
         <section className="resume-section" id="experiencia">
           <Section>
-            <div className={`resume-section-content `}>
+            <div className={`resume-section-content`}>
               <h1 className="mb-5">Experiencia</h1>
               <ExperienceList experiences={state.experiences} />
             </div>
