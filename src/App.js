@@ -29,8 +29,8 @@ function Experience(props) {
     
     <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
         <TimelineSeparator className='me-3'>
-          <TimelineDot variant="outlined" color="secondary" />
-          <TimelineConnector style={{ background: '#854CE6' }} />
+          <TimelineDot variant="outlined" color="primary" />
+          <TimelineConnector style={{ background: '#4896FF' }} />
         </TimelineSeparator> 
         <div className="flex-grow-1">
             <h3 className="mb-0">{experience.title}</h3>
@@ -62,8 +62,8 @@ function Education(props) {
   return (
     <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
       <TimelineSeparator className='me-3'>
-        <TimelineDot variant="outlined" color="secondary" />
-        <TimelineConnector style={{ background: '#854CE6' }} />
+        <TimelineDot variant="outlined" color="primary" />
+        <TimelineConnector style={{ background: '#4896FF' }} />
       </TimelineSeparator> 
       <div className="flex-grow-1">
           <h3 className="mb-0">{education.title}</h3>
