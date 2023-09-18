@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
-
+import styled, { css } from 'styled-components'
 import experiences from './dataexperiences';
 import educations from './dataeducations';
 import skills from './dataskills';
@@ -28,6 +28,7 @@ function Experience(props) {
   return (
     
     <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <TimelineItem>
         <TimelineSeparator className='me-3'>
           <TimelineDot variant="outlined" color="primary" />
           <TimelineConnector style={{ background: '#4896FF' }} />
@@ -37,9 +38,10 @@ function Experience(props) {
             <div className="subheading mb-3">{experience.company}</div>
             <p>{experience.description}</p>
         </div>
-        <div className="flex-shrink-0">
-          <span className="text-primary">{experience.commencement} &ndash; {experience.termination}</span>
-        </div>
+      </TimelineItem>
+      <div className="flex-shrink-0">
+        <span className="text-primary">{experience.commencement} &ndash; {experience.termination}</span>
+      </div>
     </div>
   )
 }
@@ -61,17 +63,21 @@ function Education(props) {
 
   return (
     <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+      <TimelineItem>
       <TimelineSeparator className='me-3'>
         <TimelineDot variant="outlined" color="primary" />
         <TimelineConnector style={{ background: '#4896FF' }} />
       </TimelineSeparator> 
+      
       <div className="flex-grow-1">
           <h3 className="mb-0">{education.title}</h3>
           <div className="subheading mb-3">{education.school}</div>
       </div>
+      </TimelineItem>
       <div className="flex-shrink-0">
         <span className="text-primary">{education.commencement} &ndash; {education.termination}</span>
       </div>
+  
     </div>
   )
 }
@@ -214,6 +220,17 @@ function App() {
   })
 
   const isBreakpoint = useMediaQuery(768);
+
+  const TimelineSection = styled.div`
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  `;
 
   return (
     <div>
