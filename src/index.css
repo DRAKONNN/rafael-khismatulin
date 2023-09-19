@@ -225,6 +225,10 @@ p.lead {
   align-items: flex-start;
 }
 
+.timeline-date {
+  font-weight: 500;
+}
+
 @media (max-width: 992px) {
   .timeline-date {
     margin-left: 2em;
