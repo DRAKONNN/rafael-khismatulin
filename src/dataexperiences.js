@@ -3,6 +3,7 @@ export default [{
   title: 'Técnico Webmaster',
   company: 'Ayuntamiento de Pedrezuela',
   description: 'Desarrollo y actualización de la nueva página web oficial del Ayuntamiento de Pedrezuela y otros proyectos.',
+  logo: '/images/logos/Logo_Pedrezuela.png',
   commencement: 'Julio 2022',
   termination: 'Julio 2023',
 }, {
@@ -10,6 +11,7 @@ export default [{
   title: 'Técnico de Soporte',
   company: 'BeDataScience',
   description: 'Soporte al equipo integrándose en el diseño de cuadro de mando, actualización y envío de información final al cliente.',
+  logo: '/images/logos/Logo_BDS.png',
   commencement: 'Diciembre 2021',
   termination: 'Enero 2022',
 }, {
@@ -17,6 +19,7 @@ export default [{
   title: 'FCT Desarrollador de Aplicaciones Móviles',
   company: 'KUBUS S.A.',
   description: 'Desarrollador de una aplicación móvil de pedidos y APIs.',
+  logo: '/images/logos/Logo_KubusSA.png',
   commencement: 'Abril 2021',
   termination: 'Junio 2021',
 }, {
@@ -24,6 +27,7 @@ export default [{
   title: 'Violinista',
   company: 'Ermitage Musical',
   description: 'Violinista en despedidas de funerales.',
+  logo: '/images/logos/Logo_EM.jpg',
   commencement: 'Junio 2020',
   termination: 'Abril 2022',
 }];

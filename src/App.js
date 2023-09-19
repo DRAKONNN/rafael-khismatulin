@@ -13,6 +13,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useAnimation } from 'framer-motion';
 
@@ -27,10 +28,18 @@ function Experience(props) {
 
   return (
     
-    <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
       <TimelineItem>
         <TimelineSeparator className='me-3'>
-          <TimelineDot variant="outlined" color="primary" />
+          <TimelineDot variant="outlined" color="primary" 
+            style={{ 
+              width: '45px', 
+              height: '45px', 
+              borderRadius: '10px', // Radio de las esquinas redondeadas 
+              background: `url(${experience.logo})`, 
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat', 
+              backgroundPosition: 'center'}} />
           <TimelineConnector style={{ background: '#4896FF' }} />
         </TimelineSeparator> 
         <div className="flex-grow-1">
@@ -39,7 +48,7 @@ function Experience(props) {
             <p>{experience.description}</p>
         </div>
       </TimelineItem>
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 timeline-date">
         <span className="text-primary">{experience.commencement} &ndash; {experience.termination}</span>
       </div>
     </div>
@@ -62,22 +71,20 @@ function Education(props) {
   const {education} = props
 
   return (
-    <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
       <TimelineItem>
-      <TimelineSeparator className='me-3'>
-        <TimelineDot variant="outlined" color="primary" />
-        <TimelineConnector style={{ background: '#4896FF' }} />
-      </TimelineSeparator> 
-      
-      <div className="flex-grow-1">
-          <h3 className="mb-0">{education.title}</h3>
-          <div className="subheading mb-3">{education.school}</div>
-      </div>
+        <TimelineSeparator className='me-3'>
+          <TimelineDot variant="outlined" color="primary" />
+          <TimelineConnector style={{ background: '#4896FF' }} />
+        </TimelineSeparator> 
+        <div className="flex-grow-1">
+            <h3 className="mb-0">{education.title}</h3>
+            <div className="subheading mb-3">{education.school}</div>
+        </div>
       </TimelineItem>
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 timeline-date">
         <span className="text-primary">{education.commencement} &ndash; {education.termination}</span>
       </div>
-  
     </div>
   )
 }
@@ -255,7 +262,7 @@ function App() {
         
       <div className="container-fluid p-0">
           
-        <section className="resume-section" id="acercade">
+        <section className="resume-section d-flex" id="acercade">
           <Section>
             <div className={`resume-section-content`}>
               <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
@@ -290,7 +297,7 @@ function App() {
           
         <section className="resume-section" id="estudios">
           <Section>
-            <div className={`resume-section-content `}>
+            <div className={`resume-section-content`}>
               <h1 className="mb-5">Estudios</h1>
               <EducationList educations={state.educations} />
             </div>
