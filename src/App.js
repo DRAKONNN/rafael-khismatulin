@@ -274,23 +274,41 @@ function App() {
                 Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y páginas web en React-Bootstrap.
                 En este momento, interesado en masterizar la programación de React.js
               </p>
-              <div class="row">
-                <div class="col-6">
+              {isBreakpoint ? (
+                <>
                   <div className="social-icons">
                     <a className="social-icon nav-link" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
                     <a className="social-icon nav-link" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
                     <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-twitter"></i></a>
                     <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
                   </div>
-                </div>
-                <div class="col">
-                  <div class="gap-2 d-md-flex justify-content-md-end">
-                  <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                    <button class="btn btn-primary" type="button">Descargar CV</button>
-                  </a>
+                  <div class="gap-2 d-md-flex mt-4">
+                    <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
+                      <button class="btn btn-primary" type="button">Descargar CV</button>
+                    </a>
                   </div>
-                </div>
-              </div>
+                </>
+              ) : (
+                <>
+                  <div class="row">
+                    <div class="col-8">
+                      <div className="social-icons">
+                        <a className="social-icon nav-link" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
+                        <a className="social-icon nav-link" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
+                        <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-twitter"></i></a>
+                        <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="gap-2 d-md-flex justify-content-md-end">
+                        <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
+                          <button class="btn btn-primary" type="button">Descargar CV</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </Section>
         </section>
