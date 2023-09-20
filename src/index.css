@@ -259,7 +259,9 @@ p.lead {
 }
 
 .img-zoom {
+  border-radius: 3px;
   overflow: hidden;
+  z-index:1;
 }
 
 .img-zoom img {
@@ -268,6 +270,12 @@ p.lead {
 
 .img-zoom img:hover {
   transform: scale(1.2);
+}
+
+.img-interest {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
 }
 
 /*
@@ -320,8 +328,10 @@ p.lead {
   background-color: rgb(238, 241, 174);
 }
 
-.bg-informatics-image {
-  background-color: rgb(230, 238, 77);
+.monochrome-image {
+  filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
+  -webkit-filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
+  -moz-filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
 }
 
 .bg-cinema-text {

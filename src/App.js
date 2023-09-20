@@ -171,6 +171,34 @@ function ProjectList(props) {
   )
 }
 
+function Interest(props) {
+  const {interest} = props
+
+  return (
+    <div className='col-md-6 img-zoom'>
+      <div className={`card bg-white text-white`}>
+        <img src={interest.image} className="card-img monochrome-image" alt="..." />
+        <div className="card-img-overlay">
+          <h5 className="card-title">{interest.title}</h5>
+          <p className="card-text">{interest.description}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function InterestList(props) {
+  const {interests} = props
+
+  return (
+    <>
+      {interests.map(interest => (
+        <Interest interest={interest} />
+      ))}
+    </>
+  )
+}
+
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
 
@@ -386,48 +414,57 @@ function App() {
             <div className="resume-section-content">
               <h1 className="mb-5">Aficiones</h1>
               <div className="row row-cols-1 gy-5">
-                {interests.map((interest, index) => {
+                <InterestList interests={state.interests} />
+                {/*{interests.map((interest, index) => {
                   const reverse = index % 2 === 1;
                   return (
                     <>
                       {isBreakpoint ? (
-                        <>
-                          <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
-                            <h3 className={interest.classAttColor}>{interest.title}</h3>
-                            <p>{interest.description}</p>
+                        <div className='col-md-6 img-zoom'>
+                          <div className={`card bg-white text-white`}>
+                            <img src={interest.image} className="card-img monochrome-image" alt="..." />
+                            <div className="card-img-overlay">
+                              <h5 className="card-title">{interest.title}</h5>
+                              <p className="card-text">{interest.description}</p>
+                            </div>
                           </div>
-                          <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
-                            <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                          </div>
-                        </>
+                        </div>
                       ) : (
                         <>
-                          {reverse ? (
-                            <>
-                              <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-start`}>
-                                <i className={`${interest.image} ${interest.classAttColor}`}></i>
+                        {reverse ? (
+                            <div class="card mb-3">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src={interest.image} class="img-fluid rounded-start" alt={interest.title}/>
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">{interest.title}</h5>
+                                    <p class="card-text">{interest.description}</p>
+                                  </div>
+                                </div>
                               </div>
-                              <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-end`} key={index}>
-                                <h3 className={interest.classAttColor}>{interest.title}</h3>
-                                <p>{interest.description}</p>
-                              </div>
-                            </>
+                            </div>
                           ) : (
-                            <>
-                              <div className={`col-lg-6 flex-row ${interest.classAttBackgroundText} bg-gradient rounded-start`} key={index}>
-                                <h3 className={interest.classAttColor}>{interest.title}</h3>
-                                <p>{interest.description}</p>
+                            <div class="card mb-3">
+                              <div class="row g-0">
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">{interest.title}</h5>
+                                    <p class="card-text">{interest.description}</p>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <img src={interest.image} class="img-fluid rounded-end" alt={interest.title}/>
+                                </div>
                               </div>
-                              <div className={`col-lg-6 interests-icons ${interest.classAttBackgroundImage} bg-gradient rounded-end`}>
-                                <i className={`${interest.image} ${interest.classAttColor}`}></i>
-                              </div>
-                            </>
+                            </div>
                           )}
                         </>
                       )}
                     </>
                   )
-                })}
+                })}*/}
               </div>
             </div>
           </Section>
