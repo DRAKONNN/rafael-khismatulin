@@ -137,7 +137,7 @@ function Project(props) {
 
   return (
     <div className="col-lg-6">
-      <div className="card">
+      <div className="card shadow-lg">
         <div className="img-zoom">
           <a href={project.url}>
             <img src={project.image} className="card-img-top" alt={project.title}/>
@@ -175,8 +175,8 @@ function Interest(props) {
   const {interest} = props
 
   return (
-    <div className='col-md-6 img-zoom'>
-      <div className={`card bg-white text-white`}>
+    <div className='col-md-6'>
+      <div className={`card bg-white text-white shadow-lg`}>
         <img src={interest.image} className="card-img monochrome-image" alt="..." />
         <div className="card-img-overlay">
           <h5 className="card-title">{interest.title}</h5>
