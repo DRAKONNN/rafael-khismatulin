@@ -334,6 +334,13 @@ p.lead {
   -moz-filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
 }
 
+@media (max-width: 768px) {
+  .monochrome-image {
+    filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
+    -webkit-filter: grayscale(12%) blur(1px) brightness(74%) saturate(116%);
+    -moz-filter: grayscale(12%) blur(2px) brightness(74%) saturate(116%);
+  }
+}
 .bg-cinema-text {
   background-color: rgb(37, 37, 37);
   color: #fff;
