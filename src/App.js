@@ -44,7 +44,7 @@ function Experience(props) {
         </TimelineSeparator> 
         <div className="flex-grow-1">
             <h3 className="mb-0">{experience.title}</h3>
-            <div className="subheading mb-3">{experience.company}</div>
+            <div className="subheading text-primary mb-3">{experience.company}</div>
             <p>{experience.description}</p>
         </div>
       </TimelineItem>
@@ -79,7 +79,7 @@ function Education(props) {
         </TimelineSeparator> 
         <div className="flex-grow-1">
             <h3 className="mb-0">{education.title}</h3>
-            <div className="subheading mb-3">{education.school}</div>
+            <div className="subheading text-primary mb-3">{education.school}</div>
         </div>
       </TimelineItem>
       <div className="flex-shrink-0 timeline-date">
@@ -176,6 +176,7 @@ function Interest(props) {
 
   return (
     <div className='col-md-6'>
+      <Section>
       <div className={`card bg-white text-white shadow-hard`}>
         <img src={interest.image} className="card-img monochrome-image" alt="..." />
         <div className="card-img-overlay">
@@ -183,6 +184,7 @@ function Interest(props) {
           <p className="card-text">{interest.description}</p>
         </div>
       </div>
+      </Section>
     </div>
   )
 }
@@ -199,45 +201,22 @@ function InterestList(props) {
   )
 }
 
-const HorizontalScrollCarousel = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+{/* Texto superpuesto
+function InterestV3(props) {
+  const {interest} = props
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
-          {interests.map((interest) => {
-            return <Interest interest={interest} key={interest.id} />;
-          })}
-        </motion.div>
+    <>
+      <div className={` bg-white text-white shadow-hard`}>
+        <img src={interest.image} className="card-img monochrome-image" alt="..." />
+        <div className="card-img-overlay">
+          <h5 className="card-title">{interest.title}</h5>
+          <p className="card-text">{interest.description}</p>
+        </div>
       </div>
-    </section>
-  );
-};
-
-const interest = ({ interest }) => {
-  return (
-    <div key={interest.id} className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200">
-      <div
-        style={{
-          backgroundImage: `url(${interest.image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <h5 className="card-title">{interest.title}</h5>
-        <p className="card-text">{interest.description}</p>
-      </div>
-    </div>
-  );
-};
+      </>
+  )
+}*/}
 
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -337,7 +316,7 @@ function App() {
               <div className="subheading mb-5">
                 Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
               </div>
-              <p className="lead mb-5" >Especializado en el desarrollo de aplicaciones móviles y web. 
+              <p className="lead mb-5 p-1 hover-zoom shadow-box" >Especializado en el desarrollo de aplicaciones móviles y web. 
                 Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
                 Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y páginas web en React-Bootstrap.
                 En este momento, interesado en masterizar la programación de React.js
@@ -413,23 +392,23 @@ function App() {
               <div className="subheading mb-3">Workflow</div>
               <ul className="fa-ul mb-0">
                 <li>
-                  <span className="fa-li"><i className="fas fa-check"></i></span>
+                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
                   Mobile-First, Responsive
                 </li>
                 <li>
-                  <span className="fa-li"><i className="fas fa-check"></i></span>
+                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
                   Cross Browser Testing | Debugging
                 </li>
                 <li>
-                  <span className="fa-li"><i className="fas fa-check"></i></span>
+                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
                   Optimización de código
                 </li>
                 <li>
-                  <span className="fa-li"><i className="fas fa-check"></i></span>
+                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
                   Desarrollo ágil de software | Scrum
                 </li>
                 <li>
-                  <span className="fa-li"><i className="fas fa-check"></i></span>
+                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
                   Autodidacta
                 </li>
               </ul>
@@ -453,7 +432,6 @@ function App() {
           <Section>
             <div className="resume-section-content">
               <h1 className="mb-5">Aficiones</h1>
-              {/*<HorizontalScrollCarousel />*/}
               <div className="row row-cols-1 gy-5">
                 <InterestList interests={state.interests} />
                 {/*{interests.map((interest, index) => {

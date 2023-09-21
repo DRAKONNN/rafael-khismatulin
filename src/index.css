@@ -279,6 +279,21 @@ p.lead {
   font-size: 8rem;
 }
 
+
+/*
+* ===== Zoom =====
+*/
+.hover-zoom {
+  border: 2px solid #4d95f3;
+  border-radius: 5px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+  border: 5px solid #005eda;
+}
+
 .img-zoom {
   border-radius: 3px;
   overflow: hidden;
