@@ -15,7 +15,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { useInView, motion, useAnimation } from 'framer-motion';
+import { useInView, motion, useTransform, useScroll } from 'framer-motion';
 
 const EXPERIENCES = experiences;
 const EDUCATIONS = educations;
@@ -35,7 +35,7 @@ function Experience(props) {
             style={{ 
               width: '45px', 
               height: '45px', 
-              borderRadius: '10px', // Radio de las esquinas redondeadas 
+              borderRadius: '10px',
               background: `url(${experience.logo})`, 
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat', 
@@ -198,6 +198,46 @@ function InterestList(props) {
     </>
   )
 }
+
+const HorizontalScrollCarousel = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
+  return (
+    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {interests.map((interest) => {
+            return <Interest interest={interest} key={interest.id} />;
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+const interest = ({ interest }) => {
+  return (
+    <div key={interest.id} className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200">
+      <div
+        style={{
+          backgroundImage: `url(${interest.image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+      <div className="absolute inset-0 z-10 grid place-content-center">
+        <h5 className="card-title">{interest.title}</h5>
+        <p className="card-text">{interest.description}</p>
+      </div>
+    </div>
+  );
+};
 
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -413,6 +453,7 @@ function App() {
           <Section>
             <div className="resume-section-content">
               <h1 className="mb-5">Aficiones</h1>
+              {/*<HorizontalScrollCarousel />*/}
               <div className="row row-cols-1 gy-5">
                 <InterestList interests={state.interests} />
                 {/*{interests.map((interest, index) => {
