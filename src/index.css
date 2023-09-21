@@ -278,6 +278,12 @@ p.lead {
   border-radius: 3px;
 }
 
+.card-img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
 /*
 * ===== Colors =====
 */
