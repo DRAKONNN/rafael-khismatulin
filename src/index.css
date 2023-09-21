@@ -219,6 +219,27 @@ p.lead {
 }
 
 /*
+* ===== Shadowing =====
+*/
+
+.shadow-item {
+  -webkit-box-shadow: 2px 4px 12px 2px rgba(0,0,0,0.62);
+  -moz-box-shadow: 2px 4px 12px 2px rgba(0,0,0,0.62);
+  box-shadow: 2px 4px 12px 2px rgba(0,0,0,0.62);
+}
+.shadow-box {
+  -webkit-box-shadow: 14px 14px 22px -8px rgba(0,0,0,0.5);
+  -moz-box-shadow: 14px 14px 22px -8px rgba(0,0,0,0.5);
+  box-shadow: 14px 14px 22px -8px rgba(0,0,0,0.5);
+}
+
+.shadow-hard {
+  -webkit-box-shadow: 14px 14px 22px -3px rgba(0,0,0,0.61);
+  -moz-box-shadow: 14px 14px 22px -3px rgba(0,0,0,0.61);
+  box-shadow: 14px 14px 22px -3px rgba(0,0,0,0.61);
+}
+
+/*
 * ===== Timelines =====
 */
 .timeline-item {

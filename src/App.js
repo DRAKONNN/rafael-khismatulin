@@ -137,7 +137,7 @@ function Project(props) {
 
   return (
     <div className="col-lg-6">
-      <div className="card shadow-lg">
+      <div className={`card shadow-box ${project.classAttBackgroundText}`}>
         <div className="img-zoom">
           <a href={project.url}>
             <img src={project.image} className="card-img-top" alt={project.title}/>
@@ -176,7 +176,7 @@ function Interest(props) {
 
   return (
     <div className='col-md-6'>
-      <div className={`card bg-white text-white shadow-lg`}>
+      <div className={`card bg-white text-white shadow-hard`}>
         <img src={interest.image} className="card-img monochrome-image" alt="..." />
         <div className="card-img-overlay">
           <h5 className="card-title">{interest.title}</h5>
@@ -305,14 +305,14 @@ function App() {
               {isBreakpoint ? (
                 <>
                   <div className="social-icons">
-                    <a className="social-icon nav-link" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
-                    <a className="social-icon nav-link" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
-                    <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-twitter"></i></a>
-                    <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
+                    <a className="social-icon nav-link shadow-item" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
+                    <a className="social-icon nav-link shadow-item" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
+                    <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-twitter"></i></a>
+                    <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
                   </div>
                   <div class="gap-2 d-md-flex mt-4">
                     <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                      <button class="btn btn-primary" type="button">Descargar CV</button>
+                      <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                     </a>
                   </div>
                 </>
@@ -321,16 +321,16 @@ function App() {
                   <div class="row">
                     <div class="col-8">
                       <div className="social-icons">
-                        <a className="social-icon nav-link" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
-                        <a className="social-icon nav-link" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
-                        <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-twitter"></i></a>
-                        <a className="social-icon nav-link disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
+                        <a className="social-icon nav-link shadow-item" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
+                        <a className="social-icon nav-link shadow-item" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
+                        <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-twitter"></i></a>
+                        <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
                       </div>
                     </div>
                     <div class="col-4">
                       <div class="gap-2 d-md-flex justify-content-md-end">
                         <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                          <button class="btn btn-primary" type="button">Descargar CV</button>
+                          <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                         </a>
                       </div>
                     </div>
