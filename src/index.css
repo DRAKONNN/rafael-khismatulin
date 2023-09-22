@@ -223,7 +223,7 @@ p.lead {
 */
 .glow:hover {
   color:#fff;
-  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+  text-shadow:1px 1px 8px #fff, 1px 1px 10px #ccc;
 }
 /*
 * ===== Shadowing =====
@@ -299,6 +299,15 @@ p.lead {
 .hover-zoom:hover {
   transform: scale(1.05);
   border: 2px solid #005eda;
+}
+
+.hover-zoom-interest {
+  border-radius: 5px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.hover-zoom-interest:hover {
+  transform: scale(1.05);
 }
 
 .img-zoom {

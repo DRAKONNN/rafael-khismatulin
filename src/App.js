@@ -178,7 +178,7 @@ function Interest(props) {
   return (
     <div className='col-md-6'>
       <Section>
-      <div className={`card bg-white text-white shadow-hard`}>
+      <div className={`card bg-white text-white shadow-hard hover-zoom-interest`}>
         <img src={interest.image} className="card-img monochrome-image" alt="..." />
         <div className="card-img-overlay">
           <h5 className="card-title">{interest.title}</h5>
