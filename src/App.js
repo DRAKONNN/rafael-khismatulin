@@ -298,12 +298,12 @@ function App() {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
           </ul>
         </div>
       </nav>
