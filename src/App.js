@@ -14,6 +14,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
+import ReactTyped from "react-typed";
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useTransform, useScroll } from 'framer-motion';
 
@@ -316,10 +317,9 @@ function App() {
               <div className="subheading mb-5">
                 Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
               </div>
-              <p className="lead mb-5 p-1 hover-zoom shadow-box" >Especializado en el desarrollo de aplicaciones móviles y web. 
-                Persona autodidacta con mucha motivación para aprender conocimientos nuevos. Además, muy activo en grupos para prestar ayuda o presentar ideas.
-                Fortificado en Java desde 2019. Creador de varias aplicaciones móviles para Android y páginas web en React-Bootstrap.
-                En este momento, interesado en masterizar la programación de React.js
+              <p className="lead mb-5 p-1 hover-zoom shadow-box fst-italic" >
+                <i class='fas fa-code'></i>{" "}
+                <ReactTyped strings={["Desarrollador Web y Mobile Apps"]} typeSpeed={100} loop/>
               </p>
               {isBreakpoint ? (
                 <>
@@ -390,26 +390,21 @@ function App() {
                 <SkillList skills={state.skills} />
               </ul>
               <div className="subheading mb-3">Workflow</div>
-              <ul className="fa-ul mb-0">
+              <ul className="fa-ul mb-0 col-8 hover-zoom border border-primary border-1 rounded-3 p-1 ms-0 shadow-box">
                 <li>
-                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
-                  Mobile-First, Responsive
+                  <i className="fas fa-check text-success"></i> Mobile-First, Responsive
                 </li>
                 <li>
-                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
-                  Cross Browser Testing | Debugging
+                  <i className="fas fa-check text-success"></i> Cross Browser Testing | Debugging
                 </li>
                 <li>
-                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
-                  Optimización de código
+                  <i className="fas fa-check text-success"></i>  Optimización de código
                 </li>
                 <li>
-                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
-                  Desarrollo ágil de software | Scrum
+                  <i className="fas fa-check text-success"></i> Desarrollo ágil de software | Scrum
                 </li>
                 <li>
-                  <span className="fa-li text-success"><i className="fas fa-check"></i></span>
-                  Autodidacta
+                  <i className="fas fa-check text-success"></i>  Autodidacta
                 </li>
               </ul>
             </div>

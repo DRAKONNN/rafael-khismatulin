@@ -291,7 +291,7 @@ p.lead {
 
 .hover-zoom:hover {
   transform: scale(1.05);
-  border: 5px solid #005eda;
+  border: 2px solid #005eda;
 }
 
 .img-zoom {
