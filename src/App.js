@@ -2,11 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
 import styled, { css } from 'styled-components'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
 import experiences from './dataexperiences';
 import educations from './dataeducations';
 import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
+
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -103,22 +107,36 @@ function EducationList(props) {
 }
 
 function Skill(props) {
-  const {skill} = props;
-  const [iconColor, setIconColor] = useState('default'); // Estado para controlar el color del icono
+  const { skill } = props;
+  const [iconColor, setIconColor] = useState('default');
+  const [activePopover, setActivePopover] = useState(null);
 
-  // Función para cambiar el color del icono al hacer clic
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIconColor(`${skill.classAttColor}`); // Cambia el color del icono a rojo al hacer clic (puedes ajustarlo según tus necesidades)
+  const handleIconClick = () => {
+    if (activePopover === skill.title) {
+      setActivePopover(null);
+    } else {
+      setActivePopover(skill.title);
+      setIconColor(`${skill.classAttColor}`);
+    }
   };
 
   return (
     <li className="list-inline-item">
-      <a className={`a-skills`} href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={skill.title} onClick={handleClick}>
-        <i className={`${skill.icon} ${iconColor}`}></i>
-      </a>
+      <OverlayTrigger
+        trigger="click"
+        placement="top"
+        show={activePopover === skill.title}
+        overlay={<Tooltip id={`tooltip-${skill.title}`}>{skill.title}</Tooltip>}
+      >
+        <a className={`a-skills`} href="#" onClick={(e) => {
+          e.preventDefault();
+          handleIconClick();
+        }}>
+          <i className={`${skill.icon} ${activePopover === skill.title ? 'active' : ''} ${iconColor}`}></i>
+        </a>
+      </OverlayTrigger>
     </li>
-  )
+  );
 }
 
 function SkillList(props) {
@@ -385,11 +403,11 @@ function App() {
           <Section>
             <div className="resume-section-content">
               <h1 className="mb-5">Habilidades</h1>
-              <div className="subheading mb-3">Lenguajes de programación y herramientas</div>
+              <div className="subheading text-primary mb-3">Lenguajes de programación y herramientas</div>
               <ul className="list-inline dev-icons">
                 <SkillList skills={state.skills} />
               </ul>
-              <div className="subheading mb-3">Workflow</div>
+              <div className="subheading text-primary mb-3">Workflow</div>
               <ul className="fa-ul mb-0 col-8 hover-zoom border border-primary border-1 rounded-3 p-1 ms-0 shadow-box">
                 <li>
                   <i className="fas fa-check text-success"></i> Mobile-First, Responsive

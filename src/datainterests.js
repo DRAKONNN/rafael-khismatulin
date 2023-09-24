@@ -1,7 +1,7 @@
 export default [{
   id: 'informatica01', 
   title: 'Informática',
-  description: 'Aunque suene a muy cliché, desde el momento en que tuve mi primera, quedé cautivado por el poder de la tecnología. La informática no solo es mi trabajo, sino también una pasión. Explorar nuevas tecnologías, programar y resolver desafíos técnicos me inspira cada día.',
+  description: 'Aunque suene a muy cliché, desde el momento en que tuve mi primera computadora, quedé cautivado por el poder de la tecnología. La informática no solo es mi trabajo, sino también una pasión. Explorar nuevas tecnologías, programar y resolver desafíos técnicos me inspira cada día.',
   image: '/images/interests/Interests_Informatics.jpg',
   classAttBackgroundText: 'bg-informatics-text',
   classAttBackgroundImage: 'bg-informatics-image',
