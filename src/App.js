@@ -3,6 +3,7 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 import styled, { css } from 'styled-components'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 import experiences from './dataexperiences';
@@ -111,6 +112,19 @@ function Skill(props) {
   const [iconColor, setIconColor] = useState('default');
   const [activePopover, setActivePopover] = useState(null);
 
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Header as="h4" className={`bg-dark text-white`}>{skill.title}</Popover.Header>
+      <Popover.Body>
+        <ul class="list-group">
+          {skill.appearances.map((appearance, index) => (
+            <li class="list-group-item">{appearance}</li>
+          ))}
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
   const handleIconClick = () => {
     if (activePopover === skill.title) {
       setActivePopover(null);
@@ -124,15 +138,15 @@ function Skill(props) {
     <li className="list-inline-item">
       <OverlayTrigger
         trigger="click"
-        placement="top"
+        placement="right"
         show={activePopover === skill.title}
-        overlay={<Tooltip id={`tooltip-${skill.title}`}>{skill.title}</Tooltip>}
+        overlay={popover}
       >
         <a className={`a-skills`} href="#" onClick={(e) => {
           e.preventDefault();
           handleIconClick();
         }}>
-          <i className={`${skill.icon} ${activePopover === skill.title ? 'active' : ''} ${iconColor}`}></i>
+          <i className={`${skill.icon} ${activePopover === skill.title ? 'active' : ''} ${iconColor}`} data-bs-content={skill.description}></i>
         </a>
       </OverlayTrigger>
     </li>
