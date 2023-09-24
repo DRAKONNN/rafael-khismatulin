@@ -138,7 +138,7 @@ function Skill(props) {
     <li className="list-inline-item">
       <OverlayTrigger
         trigger="click"
-        placement="right"
+        placement="bottom"
         show={activePopover === skill.title}
         overlay={popover}
       >
