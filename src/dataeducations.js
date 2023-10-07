@@ -1,4 +1,16 @@
 export default [{
+  id: 'cf05', 
+  title: 'Curso de programación iPhone y Angular',
+  school: 'Centro de Formación Calderón',
+  commencement: 'Julio 2022',
+  termination: 'Julio 2022',
+}, {
+  id: 'twt04', 
+  title: 'Curso de formación de Java, Springboot y Angular',
+  school: 'THE WHITE TEAM CONSULTING S.L.',
+  commencement: 'Enero 2022',
+  termination: 'Febrero 2022',
+}, {
   id: 'dam03', 
   title: 'FP Superior de Desarrollo de Aplicaciones Multiplataforma',
   school: 'IES Virgen de la Paloma',

@@ -1,4 +1,14 @@
 export default [{
+  id: 'mt01', 
+  title: "Mystery-Tales",
+  description: 'Actualmente trabajando en un proyecto web personal sobre historias de detectives y acertijos.',
+  image: '/images/projects/MysteryTales.png',
+  development: 'Desarrollada en: React y Bootstrap 5',
+  urlGitHub: 'https://github.com/DRAKONNN/MysteryTales',
+  url: 'https://mysterytales.netlify.app/',
+  classAttBackgroundText: 'bg-dark text-warning',
+  classAttButton: 'btn-dark text-white',
+}, {
   id: 'stacko01', 
   title: "STACK'O",
   description: 'Proyecto personal de una página web para filtrar diferentes juegos de cartas dependiendo del filtro que se necesite.',

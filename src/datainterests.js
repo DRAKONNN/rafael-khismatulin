@@ -9,7 +9,7 @@ export default [{
 }, {
   id: 'cine02', 
   title: 'Cine',
-  description: 'El cine es mi ventana a diferentes realidades y emociones. Me encanta sumergirme en historias cinematográficas, analizar la cinematografía y descubrir nuevos directores y géneros. De allí mi afición a la edición de vídeos. Transformar tracks separados en historias cautivadoras es una experiencia emocionante. Cada proyecto me permite explorar nuevas técnicas y estilos para mejorar mis habilidades.',
+  description: 'El cine es mi ventana a diferentes realidades y emociones. Me encanta sumergirme en historias cinematográficas, analizar la cinematografía y descubrir nuevos directores y géneros. De allí mi afición a la edición de vídeos. Transformar tracks separados en historias cautivadoras es una experiencia emocionante.',
   image: '/images/interests/Interests_Cinema.jpg',
   classAttBackgroundText: 'bg-cinema-text',
   classAttBackgroundImage: 'bg-cinema-image',
