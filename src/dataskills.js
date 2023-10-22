@@ -22,6 +22,7 @@ export default [{
   icon: 'fab fa-html5',
   classAttColor: 'orange',
   appearances: [
+    'Mystery-Tales',
     'Portfolio',
     "STACK'O",
     'Web oficial de Ayuntamiento',
@@ -32,6 +33,7 @@ export default [{
   icon: 'fab fa-css3-alt',
   classAttColor: 'blue',
   appearances: [
+    'Mystery-Tales',
     'Portfolio',
     "STACK'O",
     'Web oficial de Ayuntamiento',
@@ -42,6 +44,7 @@ export default [{
   icon: 'fab fa-js-square',
   classAttColor: 'yellow',
   appearances: [
+    'Mystery-Tales',
     'Portfolio',
     "STACK'O",
     'Web oficial de Ayuntamiento',
@@ -60,6 +63,7 @@ export default [{
   icon: 'fab fa-react',
   classAttColor: 'skyblue',
   appearances: [
+    'Mystery-Tales',
     'Portfolio',
     "STACK'O",
   ],
@@ -69,6 +73,7 @@ export default [{
   icon: 'fab fa-node-js',
   classAttColor: 'forestgreen',
   appearances: [
+    'Mystery-Tales',
     'Portfolio',
     "STACK'O",
   ],
