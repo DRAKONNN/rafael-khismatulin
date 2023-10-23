@@ -12,6 +12,9 @@ import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
 
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -319,6 +322,26 @@ function App() {
     gap: 12px;
   `;
 
+  {/* Deprecated pdf scanner*/}
+  const pdfRef = useRef();
+
+  const downloadPDF = () => {
+    const input = pdfRef.current;
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image.png');
+      const pdf = new jsPDF('p', 'mm', 'a4', true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = 30;
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      pdf.save('CV_RafaelKhismatulin.pdf');
+    });
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
@@ -340,7 +363,7 @@ function App() {
         </div>
       </nav>
         
-      <div className="container-fluid p-0">
+      <div className="container-fluid p-0" ref={pdfRef}>
           
         <section className="resume-section d-flex" id="acercade">
           <Section>
@@ -363,7 +386,7 @@ function App() {
                   </div>
                   <div class="gap-2 d-md-flex mt-4">
                     <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                      <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
+                      <button class="btn btn-primary shadow-item" type="button" onClick={downloadPDF}>Descargar CV</button>
                     </a>
                   </div>
                 </>
@@ -381,7 +404,7 @@ function App() {
                     <div class="col-4">
                       <div class="gap-2 d-md-flex justify-content-md-end">
                         <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                          <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
+                          <button class="btn btn-primary shadow-item" type="button" onClick={downloadPDF}>Descargar CV</button>
                         </a>
                       </div>
                     </div>
