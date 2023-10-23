@@ -11,9 +11,11 @@ import educations from './dataeducations';
 import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
+import DocumentPdf from './documentpdf';
 
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import { PDFViewer, PDFDownloadLink, Document, Page } from "@react-pdf/renderer";
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -386,7 +388,7 @@ function App() {
                   </div>
                   <div class="gap-2 d-md-flex mt-4">
                     <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                      <button class="btn btn-primary shadow-item" type="button" onClick={downloadPDF}>Descargar CV</button>
+                      <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                     </a>
                   </div>
                 </>
@@ -404,8 +406,15 @@ function App() {
                     <div class="col-4">
                       <div class="gap-2 d-md-flex justify-content-md-end">
                         <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                          <button class="btn btn-primary shadow-item" type="button" onClick={downloadPDF}>Descargar CV</button>
+                          <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                         </a>
+                        {/*<PDFDownloadLink document={<DocumentPdf />} fileName="CV_RafaelKhismatulin.pdf">
+                          {({ blob, url, loading, error }) => (
+                            <button class="btn btn-primary shadow-item" type="button">
+                              {loading ? 'Cargando documento...' : 'Descargar PDF'}
+                            </button>
+                          )}
+                          </PDFDownloadLink>*/}
                       </div>
                     </div>
                   </div>
