@@ -14,8 +14,12 @@ import interests from './datainterests';
 import DocumentPdf from './documentpdf';
 
 import html2canvas from 'html2canvas';
+import html2pdf from 'html2pdf.js';
 import jsPDF from 'jspdf';
+import { useReactToPrint } from 'react-to-pdf';
 import { PDFViewer, PDFDownloadLink, Document, Page } from "@react-pdf/renderer";
+import ReactDOM from 'react-dom';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -344,6 +348,28 @@ function App() {
     });
   };
 
+  
+  const handleGeneratePdf = () => {
+    const doc = new jsPDF({
+      format: 'a4',
+      unit: 'px',
+    });
+
+    // Agregar las fuentes
+    doc.setFont('Inter-Regular', 'normal');
+
+    // Obtener el contenido de DocumentPdf
+    const content = renderToStaticMarkup(<DocumentPdf />);
+
+    // Generar el PDF
+    doc.html(content, {
+      callback(doc) {
+        doc.save('document.pdf');
+      },
+    });
+  };
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
@@ -408,6 +434,10 @@ function App() {
                         <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
                           <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                         </a>
+                        {/*<button className="btn btn-primary shadow-item" type="button" onClick={handleGeneratePdf}>
+                          Generate PDF
+                        </button>*/}
+                        
                         {/*<PDFDownloadLink document={<DocumentPdf />} fileName="CV_RafaelKhismatulin.pdf">
                           {({ blob, url, loading, error }) => (
                             <button class="btn btn-primary shadow-item" type="button">

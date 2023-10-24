@@ -12,6 +12,8 @@ import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
 
+import jsPDF from 'jspdf';
+import { useReactToPrint } from 'react-to-pdf';
 import { Document, Page, pdfjs, Text, View, Image} from "@react-pdf/renderer";
 
 import Timeline from '@mui/lab/Timeline';
@@ -294,56 +296,7 @@ function DocumentPdf(props) {
   return (
       <Document>
         <Page size="A4">
-          <View style={{ margin: '20px', textAlign: 'center' }}>
-            <Text>Nombre Apellido</Text>
-            <Text>Dirección, Ciudad, País</Text>
-            <Text>Teléfono: (123) 456-7890</Text>
-            <Text>Correo electrónico: correo@example.com</Text>
-          </View>
-
-          <hr />
-
-          <View style={{ margin: '20px' }}>
-            <Text>Resumen</Text>
-            <Text>
-              Un resumen breve de tu experiencia y habilidades. Puedes describir tu experiencia laboral, educación y otros aspectos relevantes de tu carrera.
-            </Text>
-          </View>
-
-          <View style={{ margin: '20px' }}>
-            <Text>Experiencia Laboral</Text>
-            <Text>
-              <strong>Nombre de la Empresa</strong>
-              <br />
-              Cargo: Tu cargo
-              <br />
-              Fecha: Fecha de inicio - Fecha de finalización
-            </Text>
-            <Text>
-              Describe tus responsabilidades y logros en este trabajo.
-            </Text>
-          </View>
-
-          <View style={{ margin: '20px' }}>
-            <Text>Educación</Text>
-            <Text>
-              <strong>Nombre de la Universidad</strong>
-              <br />
-              Título obtenido: Tu título
-              <br />
-              Fecha de graduación: Fecha de graduación
-            </Text>
-          </View>
-
-          <View style={{ margin: '20px' }}>
-            <Text>Habilidades</Text>
-            <ul>
-              <li>Habilidad 1</li>
-              <li>Habilidad 2</li>
-              <li>Habilidad 3</li>
-              {/* Agrega más habilidades si es necesario */}
-            </ul>
-          </View>
+          <ExperienceList experiences={state.experiences} />
         </Page>
       </Document>
   );
