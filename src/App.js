@@ -13,13 +13,7 @@ import projects from './dataprojects';
 import interests from './datainterests';
 import DocumentPdf from './documentpdf';
 
-import html2canvas from 'html2canvas';
-import html2pdf from 'html2pdf.js';
-import jsPDF from 'jspdf';
-import { useReactToPrint } from 'react-to-pdf';
-import { PDFViewer, PDFDownloadLink, Document, Page } from "@react-pdf/renderer";
-import ReactDOM from 'react-dom';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { useReactToPrint } from "react-to-print";
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -328,47 +322,12 @@ function App() {
     gap: 12px;
   `;
 
-  {/* Deprecated pdf scanner*/}
-  const pdfRef = useRef();
-
-  const downloadPDF = () => {
-    const input = pdfRef.current;
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL('image.png');
-      const pdf = new jsPDF('p', 'mm', 'a4', true);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
-      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-      const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 30;
-      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
-      pdf.save('CV_RafaelKhismatulin.pdf');
-    });
-  };
-
-  
-  const handleGeneratePdf = () => {
-    const doc = new jsPDF({
-      format: 'a4',
-      unit: 'px',
-    });
-
-    // Agregar las fuentes
-    doc.setFont('Inter-Regular', 'normal');
-
-    // Obtener el contenido de DocumentPdf
-    const content = renderToStaticMarkup(<DocumentPdf />);
-
-    // Generar el PDF
-    doc.html(content, {
-      callback(doc) {
-        doc.save('document.pdf');
-      },
-    });
-  };
-
+  const componentPdf= useRef();
+  const generatePDF= useReactToPrint({
+    content: ()=>componentPdf.current,
+    documentTitle:"Userdata",
+    onAfterPrint:()=>alert("CV guardado correctamente")
+  });
 
   return (
     <div>
@@ -391,7 +350,7 @@ function App() {
         </div>
       </nav>
         
-      <div className="container-fluid p-0" ref={pdfRef}>
+      <div className="container-fluid p-0" ref={componentPdf}>
           
         <section className="resume-section d-flex" id="acercade">
           <Section>
@@ -434,17 +393,6 @@ function App() {
                         <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
                           <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
                         </a>
-                        {/*<button className="btn btn-primary shadow-item" type="button" onClick={handleGeneratePdf}>
-                          Generate PDF
-                        </button>*/}
-                        
-                        {/*<PDFDownloadLink document={<DocumentPdf />} fileName="CV_RafaelKhismatulin.pdf">
-                          {({ blob, url, loading, error }) => (
-                            <button class="btn btn-primary shadow-item" type="button">
-                              {loading ? 'Cargando documento...' : 'Descargar PDF'}
-                            </button>
-                          )}
-                          </PDFDownloadLink>*/}
                       </div>
                     </div>
                   </div>
@@ -454,7 +402,10 @@ function App() {
           </Section>
         </section>
         <hr className="m-0" />
-          
+        <button className="btn btn-primary shadow-item" type="button" onClick={generatePDF}>
+          Generate PDF
+        </button>
+        
         <section className="resume-section" id="experiencia">
           <Section>
             <div className={`resume-section-content`}>
