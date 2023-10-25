@@ -282,6 +282,8 @@ const DocumentPdf = () => {
     interests: INTERESTS
   })
 
+  const isBreakpoint = useMediaQuery(768);
+
   const TimelineSection = styled.div`
     width: 100%;
     max-width: 1000px;
@@ -293,102 +295,153 @@ const DocumentPdf = () => {
     gap: 12px;
   `;
 
-  const styles = {
-    page: {
-      fontSize: "12px",
-      maxWidth: "461px",
-      marginLeft: "5rem",
-      marginRight: "5rem",
-      "page-break-after": "always"
-    },
+  const componentPdf= useRef();
+  const generatePDF= useReactToPrint({
+    content: ()=>componentPdf.current,
+    documentTitle:"Userdata",
+  });
 
-    columnLayout: {
-      display: "flex",
-      justifyContent: "space-between",
-      margin: "3rem 0 5rem 0",
-      gap: "2rem"
-    },
-
-    column: {
-      display: "flex",
-      flexDirection: "column"
-    },
-
-    spacer2: {
-      height: "2rem"
-    },
-
-    fullWidth: {
-      width: "100%"
-    },
-
-    marginb0: {
-      marginBottom: 0
-    }
-  };
 
   return (
-      
-        <>
-      <div style={styles.page}>
-        <div>
-          <h1 style={styles.introText}>
-            Report Heading That Spans More Than Just One Line
-          </h1>
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
+        <a className="navbar-brand js-scroll-trigger" href="#page-top">
+          <div className="img-zoom img-profile rounded mx-auto mb-2">
+          <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+          </div>
+        </a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav">
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
+          </ul>
         </div>
-
-        <img style={styles.fullWidth} src="photo-2.png" />
+      </nav>
+        
+      <div className="container-fluid p-0">
+          
+        <section className="resume-section d-flex" id="acercade">
+          <Section>
+            <div className={`resume-section-content`}>
+              <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
+              <div className="subheading mb-5">
+                Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+              </div>
+              <p className="lead mb-5 p-1 hover-zoom shadow-box fst-italic" >
+                <i class='fas fa-code'></i>{" "}
+                <ReactTyped strings={["Desarrollador Web y Mobile Apps"]} typeSpeed={100} loop/>
+              </p>
+              {isBreakpoint ? (
+                <>
+                  <div className="social-icons">
+                    <a className="social-icon nav-link shadow-item" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
+                    <a className="social-icon nav-link shadow-item" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
+                    <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-twitter"></i></a>
+                    <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
+                  </div>
+                  <div class="gap-2 d-md-flex mt-4">
+                    <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
+                      <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div class="row">
+                    <div class="col-8">
+                      <div className="social-icons">
+                        <a className="social-icon nav-link shadow-item" href="https://www.linkedin.com/in/rafael-khismatulin-pivnenko-3647a1218/"><i className="fab fa-linkedin-in"></i></a>
+                        <a className="social-icon nav-link shadow-item" href="https://github.com/DRAKONNN"><i className="fab fa-github"></i></a>
+                        <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-twitter"></i></a>
+                        <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="gap-2 d-md-flex justify-content-md-end">
+                        <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
+                          <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </Section>
+        </section>
+        <hr className="m-0" />
+        <button className="btn btn-primary shadow-item" type="button" onClick={generatePDF}>
+          Generar CV
+        </button>
+        
+        <section className="resume-section" id="experiencia">
+          <Section>
+            <div className={`resume-section-content`}>
+              <h1 className="mb-5">Experiencia</h1>
+              <ExperienceList experiences={state.experiences} />
+            </div>
+          </Section>
+        </section>
+        <hr className="m-0" />
+          
+        <section className="resume-section" id="estudios">
+          <Section>
+            <div className={`resume-section-content`}>
+              <h1 className="mb-5">Estudios</h1>
+              <EducationList educations={state.educations} />
+            </div>
+          </Section>
+        </section>
+        <hr className="m-0" />
+          
+        <section className="resume-section" id="habilidades">
+          <Section>
+            <div className="resume-section-content">
+              <h1 className="mb-5">Habilidades</h1>
+              <div className="subheading text-primary mb-3">Lenguajes de programación y herramientas</div>
+              <ul className="list-inline dev-icons">
+                <SkillList skills={state.skills} />
+              </ul>
+              <div className="subheading text-primary mb-3">Workflow</div>
+              <ul className="fa-ul mb-0 col-8 hover-zoom border border-primary border-1 rounded-3 p-1 ms-0 shadow-box">
+                <li>
+                  <i className="fas fa-check text-success"></i> Mobile-First, Responsive
+                </li>
+                <li>
+                  <i className="fas fa-check text-success"></i> Cross Browser Testing | Debugging
+                </li>
+                <li>
+                  <i className="fas fa-check text-success"></i>  Optimización de código
+                </li>
+                <li>
+                  <i className="fas fa-check text-success"></i> Desarrollo ágil de software | Scrum
+                </li>
+                <li>
+                  <i className="fas fa-check text-success"></i>  Autodidacta
+                </li>
+              </ul>
+            </div>
+          </Section>
+        </section>
+        <hr className="m-0" />
+          
+        <section className="resume-section" id="proyectos">
+          <Section>
+            <div className="resume-section-content">
+              <h1 className="mb-5">Proyectos</h1>
+              <div id="row-characters" class="row gy-5">
+                <ProjectList projects={state.projects} />
+              </div>
+            </div>
+          </Section>
+        </section>
       </div>
-
-      <div style={styles.page}>
-        <div>
-          <h2 style={styles.introText}>
-            Report Heading That Spans More Than Just One Line
-          </h2>
-        </div>
-
-        <div style={styles.columnLayout}>
-          <div style={styles.column}>
-            <img style={styles.fullWidth} src="photo-2.png" />
-            <h4 style={styles.marginb0}>Subtitle One</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-
-          <div style={styles.column}>
-            <img style={styles.fullWidth} src="photo-1.png" />
-            <h4 style={styles.marginb0}>Subtitle Two</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-
-        <div style={styles.columnLayout}>
-          <div style={styles.column}>
-            <img style={styles.fullWidth} src="photo-3.png" />
-            <h4 style={styles.marginb0}>Subtitle One</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-
-          <div style={styles.column}>
-            <img style={styles.fullWidth} src="photo-4.png" />
-            <h4 style={styles.marginb0}>Subtitle Two</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-       
+    </div>
   );
 }
 

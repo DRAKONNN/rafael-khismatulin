@@ -326,11 +326,10 @@ function App() {
   const generatePDF= useReactToPrint({
     content: ()=>componentPdf.current,
     documentTitle:"Userdata",
-    onAfterPrint:()=>alert("CV guardado correctamente")
   });
 
   return (
-    <div>
+    <div ref={componentPdf}>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
           <div className="img-zoom img-profile rounded mx-auto mb-2">
@@ -350,7 +349,7 @@ function App() {
         </div>
       </nav>
         
-      <div className="container-fluid p-0" ref={componentPdf}>
+      <div className="container-fluid p-0">
           
         <section className="resume-section d-flex" id="acercade">
           <Section>
@@ -403,7 +402,7 @@ function App() {
         </section>
         <hr className="m-0" />
         <button className="btn btn-primary shadow-item" type="button" onClick={generatePDF}>
-          Generate PDF
+          Generar CV
         </button>
         
         <section className="resume-section" id="experiencia">
