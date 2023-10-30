@@ -13,7 +13,9 @@ import projects from './dataprojects';
 import interests from './datainterests';
 import DocumentPdf from './documentpdf';
 
-import { useReactToPrint } from "react-to-print";
+import { ReactToPrint, useReactToPrint } from "react-to-print";
+
+import Modal from 'react-bootstrap/Modal';
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -328,8 +330,15 @@ function App() {
     documentTitle:"Userdata",
   });
 
+  const [show, setShow] = useState(false);
+  const [fullscreen, setFullscreen] = useState(true);
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
   return (
-    <div ref={componentPdf}>
+    <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
           <div className="img-zoom img-profile rounded mx-auto mb-2">
@@ -348,7 +357,7 @@ function App() {
           </ul>
         </div>
       </nav>
-        
+      
       <div className="container-fluid p-0">
           
         <section className="resume-section d-flex" id="acercade">
@@ -371,9 +380,7 @@ function App() {
                     <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
                   </div>
                   <div class="gap-2 d-md-flex mt-4">
-                    <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                      <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
-                    </a>
+                    <button class="btn btn-primary shadow-item" type="button" onClick={() => handleShow(true)}>Generar CV</button>
                   </div>
                 </>
               ) : (
@@ -389,9 +396,7 @@ function App() {
                     </div>
                     <div class="col-4">
                       <div class="gap-2 d-md-flex justify-content-md-end">
-                        <a href="/documents/Curriculum_Rafael_Khismatulin1.pdf" target="_blank">
-                          <button class="btn btn-primary shadow-item" type="button">Descargar CV</button>
-                        </a>
+                        <button class="btn btn-primary shadow-item" type="button" onClick={() => handleShow(true)}>Generar CV</button>
                       </div>
                     </div>
                   </div>
@@ -401,10 +406,18 @@ function App() {
           </Section>
         </section>
         <hr className="m-0" />
-        <button className="btn btn-primary shadow-item" type="button" onClick={generatePDF}>
-          Generar CV
-        </button>
         
+        <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal</Modal.Title>
+          </Modal.Header>
+          <Modal.Body ref={componentPdf}>
+            Modal body content
+            <DocumentPdf />
+            <button class="btn btn-primary shadow-item" type="button" onClick={generatePDF}>Generar CV</button>
+          </Modal.Body>
+        </Modal>
+
         <section className="resume-section" id="experiencia">
           <Section>
             <div className={`resume-section-content`}>

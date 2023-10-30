@@ -24,7 +24,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import ReactTyped from "react-typed";
-import { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useInView, motion, useTransform, useScroll } from 'framer-motion';
 
 
@@ -272,7 +272,7 @@ function Section({ children }) {
   );
 }
 
-const DocumentPdf = () => {
+const DocumentPdf = React.forwardRef((props, ref) => {
 
   const [state, setState] = useState({
     experiences: EXPERIENCES,
@@ -294,13 +294,6 @@ const DocumentPdf = () => {
     justify-content: center;
     gap: 12px;
   `;
-
-  const componentPdf= useRef();
-  const generatePDF= useReactToPrint({
-    content: ()=>componentPdf.current,
-    documentTitle:"Userdata",
-  });
-
 
   return (
     <div>
@@ -375,9 +368,6 @@ const DocumentPdf = () => {
           </Section>
         </section>
         <hr className="m-0" />
-        <button className="btn btn-primary shadow-item" type="button" onClick={generatePDF}>
-          Generar CV
-        </button>
         
         <section className="resume-section" id="experiencia">
           <Section>
@@ -443,6 +433,6 @@ const DocumentPdf = () => {
       </div>
     </div>
   );
-}
+})
 
 export default DocumentPdf;

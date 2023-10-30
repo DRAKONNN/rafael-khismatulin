@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.2",
     "react-pdf": "^7.5.1",
+    "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "react-to-pdf": "^1.0.1",
     "react-to-print": "^2.14.15",
