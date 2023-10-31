@@ -297,28 +297,10 @@ const DocumentPdf = React.forwardRef((props, ref) => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
-        <a className="navbar-brand js-scroll-trigger" href="#page-top">
-          <div className="img-zoom img-profile rounded mx-auto mb-2">
-          <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
-          </div>
-        </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
-          </ul>
-        </div>
-      </nav>
-        
-      <div className="container-fluid p-0">
-          
-        <section className="resume-section d-flex" id="acercade">
+      <div className="container-fluid p-0 mt-0">
+      <div class="row">
+        <div class="col-4 bg-dark">col-4</div>
+        <div class="col-8"><section className="resume-section d-flex" id="acercade">
           <Section>
             <div className={`resume-section-content`}>
               <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
@@ -429,7 +411,10 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               </div>
             </div>
           </Section>
-        </section>
+        </section></div>
+      </div>
+          
+
       </div>
     </div>
   );

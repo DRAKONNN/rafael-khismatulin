@@ -408,11 +408,10 @@ function App() {
         <hr className="m-0" />
         
         <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal</Modal.Title>
+          <Modal.Header className="bg-dark" closeButton>
+            <Modal.Title className="text-white">Previsualización del pdf</Modal.Title>
           </Modal.Header>
           <Modal.Body ref={componentPdf}>
-            Modal body content
             <DocumentPdf />
             <button class="btn btn-primary shadow-item" type="button" onClick={generatePDF}>Generar CV</button>
           </Modal.Body>
