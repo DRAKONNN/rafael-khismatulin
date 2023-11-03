@@ -342,7 +342,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
           <div className="img-zoom img-profile rounded mx-auto mb-2">
-          <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+            <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
           </div>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
@@ -365,7 +365,7 @@ function App() {
             <div className={`resume-section-content`}>
               <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
               <div className="subheading mb-5">
-                Calle Ochagavia 38, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+                Madrid, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
               </div>
               <p className="lead mb-5 p-1 hover-zoom shadow-box fst-italic" >
                 <i class='fas fa-code'></i>{" "}
@@ -410,10 +410,10 @@ function App() {
         <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
           <Modal.Header className="bg-dark" closeButton>
             <Modal.Title className="text-white">Previsualización del pdf</Modal.Title>
+            <button class="btn btn-primary shadow-item ms-3" type="button" onClick={generatePDF}>Descargar CV</button>
           </Modal.Header>
           <Modal.Body ref={componentPdf}>
             <DocumentPdf />
-            <button class="btn btn-primary shadow-item" type="button" onClick={generatePDF}>Generar CV</button>
           </Modal.Body>
         </Modal>
 

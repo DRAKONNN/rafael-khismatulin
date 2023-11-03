@@ -470,3 +470,14 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.smaller-content {
+  font-size: 14px !important;
+}
