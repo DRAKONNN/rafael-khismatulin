@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import Tooltip from 'react-bootstrap/Tooltip';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 import experiences from './dataexperiences';
 import educations from './dataeducations';
@@ -40,9 +41,9 @@ function Experience(props) {
 
   return (
     
-    <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
-      <TimelineItem>
-        <TimelineSeparator className='me-3'>
+    <div key={experience.id} className="d-flex flex-column flex-md-row justify-content-between timeline-item mb-1">
+      <TimelineItem className="mt-0">
+        <TimelineSeparator className='me-3 ms-1'>
           <TimelineDot variant="outlined" color="primary" 
             style={{ 
               width: '45px', 
@@ -55,19 +56,20 @@ function Experience(props) {
           <TimelineConnector style={{ background: '#4896FF' }} />
         </TimelineSeparator> 
         <div className="flex-grow-1">
-          <div class="row">
-            <div class="col-6">
-              <h6 className="mb-0">{experience.title}</h6>
-              <h6 className="text-primary mb-3">{experience.company}</h6>
+          <div class="d-flex justify-content-between">
+            <div class="flex-fill">
+              <h6 class="mb-0">{experience.title}</h6>
+              <h6 class="text-primary mb-1">{experience.company}</h6>
             </div>
-            <div class="col-6"> 
-                <span className="text-primary">{experience.commencement} &ndash; {experience.termination}</span>
+            <div class="flex-fill">
+              <div class="text-end">
+                <p class="text-primary">{experience.commencement} &ndash; {experience.termination}</p>
+              </div>
             </div>
           </div>
-            <p>{experience.description}</p>
+          <p className="align-self-end">{experience.description}</p>
         </div>
       </TimelineItem>
-      
     </div>
   )
 }
@@ -88,20 +90,17 @@ function Education(props) {
   const {education} = props
 
   return (
-    <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-5 timeline-item">
+    <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-0 ms-3 timeline-item">
       <TimelineItem>
         <TimelineSeparator className='me-3'>
           <TimelineDot variant="outlined" color="primary" />
           <TimelineConnector style={{ background: '#4896FF' }} />
         </TimelineSeparator> 
-        <div className="flex-grow-1">
-            <h3 className="mb-0">{education.title}</h3>
-            <div className="subheading text-primary mb-3">{education.school}</div>
+        <div>
+          <h6 class="mb-0">{education.title}</h6>
+          <p class="text-primary">{education.commencement} &ndash; {education.termination}</p>
         </div>
       </TimelineItem>
-      <div className="flex-shrink-0 timeline-date">
-        <span className="text-primary">{education.commencement} &ndash; {education.termination}</span>
-      </div>
     </div>
   )
 }
@@ -113,64 +112,6 @@ function EducationList(props) {
     <>
       {educations.map(education => (
         <Education education={education} />
-      ))}
-    </>
-  )
-}
-
-function Skill(props) {
-  const { skill } = props;
-  const [iconColor, setIconColor] = useState('default');
-  const [activePopover, setActivePopover] = useState(null);
-
-  const popover = (
-    <Popover id="popover-basic">
-      <Popover.Header as="h4" className={`bg-dark text-white`}>{skill.title}</Popover.Header>
-      <Popover.Body>
-        <ul class="list-group">
-          {skill.appearances.map((appearance, index) => (
-            <li class="list-group-item">{appearance}</li>
-          ))}
-        </ul>
-      </Popover.Body>
-    </Popover>
-  );
-
-  const handleIconClick = () => {
-    if (activePopover === skill.title) {
-      setActivePopover(null);
-    } else {
-      setActivePopover(skill.title);
-      setIconColor(`${skill.classAttColor}`);
-    }
-  };
-
-  return (
-    <li className="list-inline-item">
-      <OverlayTrigger
-        trigger="click"
-        placement="bottom"
-        show={activePopover === skill.title}
-        overlay={popover}
-      >
-        <a className={`a-skills`} href="#" onClick={(e) => {
-          e.preventDefault();
-          handleIconClick();
-        }}>
-          <i className={`${skill.icon} ${activePopover === skill.title ? 'active' : ''} ${iconColor}`} data-bs-content={skill.description}></i>
-        </a>
-      </OverlayTrigger>
-    </li>
-  );
-}
-
-function SkillList(props) {
-  const {skills} = props
-
-  return (
-    <>
-      {skills.map(skill => (
-        <Skill skill={skill} />
       ))}
     </>
   )
@@ -302,26 +243,57 @@ const DocumentPdf = React.forwardRef((props, ref) => {
 
   return (
     <div>
-      <div className="container-fluid p-3 mt-0">
+      <div className="container-fluid p-3 mt-1">
         <div class="row">
-          <div class="col-4 bg-dark text-white center-content">
+          <div class="col-4 bg-dark text-white rounded">
+            <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
+              <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+            </div>
             <h1>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h1>
-            <div className="subheading mb-5">
-              Madrid, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+            <div className="subheading mb-3">
+              · Madrid, 28039 Madrid · 60 100 58 38 <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+            </div>
+            <div className="mb-3">
+              <h3>Idiomas</h3>
+              <ul>
+                <li class="list-group-item"><b>- Español:</b> nativo</li>
+                <li class="list-group-item"><b>- Inglés:</b> conversación</li>
+              </ul>
+            </div>
+            <div className="mb-3">
+              <h3>Habilidades</h3>
+              <div className="row row-cols-2 ms-1">
+                <div class="col"><b><i className="fab fa-java"></i> Java</b></div>
+                <div class="col"><b><i className="fab fa-android"></i> Android</b></div>
+                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
+                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
+                <div class="col"><b><i className="fab fa-js-square"></i> Javascript</b></div>
+                <div class="col"><b><i className="fab fa-react"></i> React</b></div>
+                <div class="col"><b><i className="	fas fa-code"></i> Bootstrap</b></div>
+                <div class="col"><b><i className="fab fa-php"></i> PHP</b></div>
+              </div>
+            </div>
+            <div className="mb-3">
+              <h3>Proyectos</h3>
+                <div><b>· Portfolio web:</b> https://rafael-khismatulin.netlify.app/</div>
+                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
+                <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
+              
             </div>
           </div>
+
           <div class="col-8">
             <div className={`resume-section-content`}>
-              <h3 className="mb-5">Experiencia</h3>
+              <h3 className="mb-2">Experiencia</h3>
               <ExperienceList experiences={state.experiences} />
             </div>
-            <hr className="m-0" />
+            <hr className="m-1" />
 
             <div className={`resume-section-content`}>
-              <h3 className="mb-5">Estudios</h3>
+              <h3 className="mb-2">Estudios</h3>
               <EducationList educations={state.educations} />
             </div>
-            <hr className="m-0" />
+            <hr className="m-1" />
           </div>
         </div>
       </div>
