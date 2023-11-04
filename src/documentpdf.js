@@ -249,10 +249,13 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
               <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
             </div>
-            <h1>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h1>
-            <div className="subheading mb-3">
-              · Madrid, 28039 Madrid · 60 100 58 38 <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+            <h2>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h2>
+            <div className="mb-3">
+              <h4>· Madrid, 28039 Madrid</h4>
+              <h4>· 60 100 58 38</h4>
+              <h4><a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a></h4>
             </div>
+           
             <div className="mb-3">
               <h3>Idiomas</h3>
               <ul>
@@ -293,7 +296,6 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3 className="mb-2">Estudios</h3>
               <EducationList educations={state.educations} />
             </div>
-            <hr className="m-1" />
           </div>
         </div>
       </div>

@@ -327,7 +327,7 @@ function App() {
   const componentPdf= useRef();
   const generatePDF= useReactToPrint({
     content: ()=>componentPdf.current,
-    documentTitle:"Userdata",
+    documentTitle:"CV_RafaelKhismatulin",
   });
 
   const [show, setShow] = useState(false);
@@ -380,7 +380,7 @@ function App() {
                     <a className="social-icon nav-link shadow-item disabled" href="#!"><i className="fab fa-facebook-f"></i></a>
                   </div>
                   <div class="gap-2 d-md-flex mt-4">
-                    <button class="btn btn-primary shadow-item" type="button" onClick={() => handleShow(true)}>Generar CV</button>
+                    <a href=".\documents\CV_RafaelKhismatulin.pdf" target="_blank" class="btn btn-primary shadow-item">Descargar CV</a>
                   </div>
                 </>
               ) : (
