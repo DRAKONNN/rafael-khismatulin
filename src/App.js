@@ -12,6 +12,7 @@ import skills from './dataskills';
 import projects from './dataprojects';
 import interests from './datainterests';
 import DocumentPdf from './documentpdf';
+import DocumentPdfEnglish from './documentpdf-english';
 
 import { ReactToPrint, useReactToPrint } from "react-to-print";
 
