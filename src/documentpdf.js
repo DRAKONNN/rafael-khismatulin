@@ -278,10 +278,10 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             </div>
             <div className="mb-3">
               <h3>Proyectos</h3>
-                <div><b>· Portfolio web:</b> https://rafael-khismatulin.netlify.app/</div>
-                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
-              
+                <div><b>· Modelo Portfolio:</b> https://liana-unanyan.netlify.app/</div>
+                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
+                <div><b>· Portfolio web:</b> https://rafael-khismatulin.netlify.app/</div>
             </div>
           </div>
 
