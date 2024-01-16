@@ -1,7 +1,17 @@
 export default [{
+  id: 'liana01', 
+  title: "Modelo Portfolio",
+  description: 'Actualmente trabajando en un portfolio web para modelo.',
+  image: '/images/projects/PortfolioLiana.png',
+  development: 'Desarrollada en: React y Bootstrap 5',
+  urlGitHub: 'https://github.com/DRAKONNN/PortfolioLiana',
+  url: 'https://liana-unanyan.netlify.app/',
+  classAttBackgroundText: 'bg-white text-danger',
+  classAttButton: 'btn-dark text-white',
+}, {
   id: 'mt01', 
   title: "Mystery-Tales",
-  description: 'Actualmente trabajando en un proyecto web personal sobre historias de detectives y acertijos.',
+  description: 'Proyecto web personal sobre historias de detectives y acertijos.',
   image: '/images/projects/MysteryTales.png',
   development: 'Desarrollada en: React y Bootstrap 5',
   urlGitHub: 'https://github.com/DRAKONNN/MysteryTales',
@@ -20,7 +30,7 @@ export default [{
   classAttButton: 'btn-dark text-white',
 }, {
   id: 'portfolio02', 
-  title: "Mi Portfolio",
+  title: "Mi Portfolio Web",
   description: 'Este mismo portfolio web personal para ver mis experiencias, estudios, proyectos personales y más...',
   image: '/images/projects/PortfolioWeb.png',
   development: 'Desarrollada en: React y Bootstrap 5',
