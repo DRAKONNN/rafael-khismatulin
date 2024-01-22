@@ -26,16 +26,6 @@ export default [{
   development: 'Desarrollada en: React y Bootstrap 5',
   urlGitHub: 'https://github.com/DRAKONNN/STACK-O',
   url: 'https://stack-o.netlify.app/',
-  classAttBackgroundText: 'bg-danger text-white',
-  classAttButton: 'btn-dark text-white',
-}, {
-  id: 'portfolio02', 
-  title: "Mi Portfolio Web",
-  description: 'Este mismo portfolio web personal para ver mis experiencias, estudios, proyectos personales y más...',
-  image: '/images/projects/PortfolioWeb.png',
-  development: 'Desarrollada en: React y Bootstrap 5',
-  urlGitHub: 'https://github.com/DRAKONNN/rafael-khismatulin',
-  url: 'https://rafael-khismatulin.netlify.app/',
   classAttBackgroundText: 'bg-primary text-white',
   classAttButton: 'btn-dark text-white',
 }, {

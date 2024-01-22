@@ -352,8 +352,8 @@ function App() {
             <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#acercade"><i className="fas fa-user-circle"></i> Acerca de</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#experiencia"><i className="fas fa-briefcase"></i> Experiencia</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#estudios"><i className="	fas fa-user-graduate"></i> Estudios</a></li>
-            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#proyectos"><i className="fab fa-react"></i> Proyectos</a></li>
+            <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#habilidades"><i className="fas fa-code"></i> Habilidades</a></li>
             <li className="nav-item"><a className="nav-link js-scroll-trigger glow" href="#aficiones"><i className="	fas fa-heart"></i> Aficiones</a></li>
           </ul>
         </div>
@@ -437,7 +437,19 @@ function App() {
           </Section>
         </section>
         <hr className="m-0" />
-          
+
+        <section className="resume-section" id="proyectos">
+          <Section>
+            <div className="resume-section-content">
+              <h1 className="mb-5">Proyectos</h1>
+              <div id="row-characters" class="row gy-5">
+                <ProjectList projects={state.projects} />
+              </div>
+            </div>
+          </Section>
+        </section>
+        <hr className="m-0" />
+
         <section className="resume-section" id="habilidades">
           <Section>
             <div className="resume-section-content">
@@ -458,6 +470,12 @@ function App() {
                   <i className="fas fa-check text-success"></i>  Optimización de código
                 </li>
                 <li>
+                  <i className="fas fa-check text-success"></i>  Trabajo en equipo
+                </li>
+                <li>
+                  <i className="fas fa-check text-success"></i>  Presentación de ideas e innovación
+                </li>
+                <li>
                   <i className="fas fa-check text-success"></i> Desarrollo ágil de software | Scrum
                 </li>
                 <li>
@@ -469,17 +487,6 @@ function App() {
         </section>
         <hr className="m-0" />
           
-        <section className="resume-section" id="proyectos">
-          <Section>
-            <div className="resume-section-content">
-              <h1 className="mb-5">Proyectos</h1>
-              <div id="row-characters" class="row gy-5">
-                <ProjectList projects={state.projects} />
-              </div>
-            </div>
-          </Section>
-        </section>
-
         <section className="resume-section" id="aficiones">
           <Section>
             <div className="resume-section-content">

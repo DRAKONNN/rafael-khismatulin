@@ -282,7 +282,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Modelo Portfolio:</b> https://liana-unanyan.netlify.app/</div>
                 <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
-                <div><b>· Portfolio web:</b> https://rafael-khismatulin.netlify.app/</div>
+                <div><b>· App móvil:</b> https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz</div>
             </div>
           </div>
 
