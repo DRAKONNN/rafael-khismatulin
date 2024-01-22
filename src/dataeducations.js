@@ -1,5 +1,11 @@
 export default [{
   id: 'cf05', 
+  title: 'Curso de ciberseguridad de Cisco',
+  school: 'Cisco',
+  commencement: 'Noviembre 2023',
+  termination: 'Diciembre 2023',
+}, {
+  id: 'cf05', 
   title: 'Curso de programación iPhone y Angular',
   school: 'Centro de Formación Calderón',
   commencement: 'Julio 2022',
