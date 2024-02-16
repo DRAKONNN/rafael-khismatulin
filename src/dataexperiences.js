@@ -22,12 +22,4 @@ export default [{
   logo: '/images/logos/Logo_KubusSA.png',
   commencement: 'Abril 2021',
   termination: 'Junio 2021',
-}, {
-  id: 'violinista01', 
-  title: 'Violinista',
-  company: 'Ermitage Musical',
-  description: 'Violinista en despedidas de funerales.',
-  logo: '/images/logos/Logo_EM.jpg',
-  commencement: 'Junio 2020',
-  termination: 'Abril 2022',
 }];

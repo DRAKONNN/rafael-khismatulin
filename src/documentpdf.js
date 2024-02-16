@@ -265,15 +265,16 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               </ul>
             </div>
             <div className="mb-3">
-              <h3>Habilidades</h3>
+              <h3>Herramientas</h3>
               <div className="row row-cols-2 ms-1">
                 <div class="col"><b><i className="fab fa-java"></i> Java</b></div>
                 <div class="col"><b><i className="fab fa-android"></i> Android</b></div>
-                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
-                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
                 <div class="col"><b><i className="fab fa-js-square"></i> Javascript</b></div>
                 <div class="col"><b><i className="fab fa-react"></i> React</b></div>
+                <div class="col"><b><i className="fab fa-angular"></i> Angular</b></div>
                 <div class="col"><b><i className="	fas fa-code"></i> Bootstrap</b></div>
+                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
+                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
                 <div class="col"><b><i className="fab fa-php"></i> PHP</b></div>
               </div>
             </div>
@@ -294,9 +295,11 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             <hr className="m-1" />
 
             <div className={`resume-section-content`}>
-              <h3 className="mb-2">Estudios</h3>
+              <h3 className="mb-2 mt-2">Estudios</h3>
               <EducationList educations={state.educations} />
             </div>
+            <hr className="m-1" />
+            <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub: </h4><p>https://github.com/DRAKONNN</p>
           </div>
         </div>
       </div>
