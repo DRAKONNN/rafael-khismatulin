@@ -98,6 +98,7 @@ function Education(props) {
         </TimelineSeparator> 
         <div>
           <h6 class="mb-0">{education.title}</h6>
+          <h6 class="text-primary mb-1">{education.school}</h6>
           <p class="text-primary">{education.commencement} &ndash; {education.termination}</p>
         </div>
       </TimelineItem>
