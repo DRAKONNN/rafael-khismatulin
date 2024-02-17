@@ -1,14 +1,4 @@
 export default [{
-  id: 'liana01', 
-  title: "Modelo Portfolio",
-  description: 'Actualmente trabajando en un portfolio web para modelo.',
-  image: '/images/projects/PortfolioLiana.png',
-  development: 'Desarrollada en: React y Bootstrap 5',
-  urlGitHub: 'https://github.com/DRAKONNN/PortfolioLiana',
-  url: 'https://liana-unanyan.netlify.app/',
-  classAttBackgroundText: 'bg-white text-danger',
-  classAttButton: 'btn-dark text-white',
-}, {
   id: 'mt01', 
   title: "Mystery-Tales",
   description: 'Proyecto web personal sobre historias de detectives y acertijos.',
@@ -17,6 +7,16 @@ export default [{
   urlGitHub: 'https://github.com/DRAKONNN/MysteryTales',
   url: 'https://mysterytales.netlify.app/',
   classAttBackgroundText: 'bg-dark text-warning',
+  classAttButton: 'btn-dark text-white',
+}, {
+  id: 'liana01', 
+  title: "Modelo Portfolio",
+  description: 'Actualmente trabajando en un portfolio web para modelo.',
+  image: '/images/projects/PortfolioLiana.png',
+  development: 'Desarrollada en: React y Bootstrap 5',
+  urlGitHub: 'https://github.com/DRAKONNN/PortfolioLiana',
+  url: 'https://liana-unanyan.netlify.app/',
+  classAttBackgroundText: 'bg-white text-danger',
   classAttButton: 'btn-dark text-white',
 }, {
   id: 'stacko01', 
@@ -28,14 +28,4 @@ export default [{
   url: 'https://stack-o.netlify.app/',
   classAttBackgroundText: 'bg-primary text-white',
   classAttButton: 'btn-dark text-white',
-}, {
-  id: 'agz27', 
-  title: "Arganzuela 27",
-  description: 'TFG: app móvil que mejora la organización de un colectivo solidario',
-  image: '/images/projects/PlayStoreAgz27.png',
-  development: 'Desarrollada en: Android Studio, PHP y SQL',
-  urlGitHub: 'https://github.com/DRAKONNN',
-  url: 'https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz',
-  classAttBackgroundText: 'bg-dark text-white',
-  classAttButton: 'btn-light text-dark',
 }];

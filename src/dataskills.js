@@ -83,6 +83,14 @@ export default [{
     "STACK'O",
   ],
 }, {
+  id: 'python07', 
+  title: "Python",
+  icon: 'fab fa-python',
+  classAttColor: 'skyblue',
+  appearances: [
+    'Sin experiencia',
+  ],
+}, {
   id: 'php09', 
   title: "PHP",
   icon: 'fab fa-php',
