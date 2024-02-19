@@ -98,6 +98,7 @@ function Education(props) {
         </TimelineSeparator> 
         <div>
           <h6 class="mb-0">{education.title}</h6>
+          <h6 class="text-primary mb-1">{education.school}</h6>
           <p class="text-primary">{education.commencement} &ndash; {education.termination}</p>
         </div>
       </TimelineItem>
@@ -243,7 +244,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
 
   return (
     <div>
-      <div className="container-fluid p-3 mt-1">
+      <div className="container-fluid p-3 mt-0 pt-2">
         <div class="row">
           <div class="col-4 bg-dark text-white rounded">
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
@@ -266,22 +267,24 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             <div className="mb-3">
               <h3>Skills</h3>
               <div className="row row-cols-2 ms-1">
-                <div class="col"><b><i className="fab fa-java"></i> Java</b></div>
+              <div class="col"><b><i className="fab fa-java"></i> Java</b></div>
                 <div class="col"><b><i className="fab fa-android"></i> Android</b></div>
-                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
-                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
                 <div class="col"><b><i className="fab fa-js-square"></i> Javascript</b></div>
                 <div class="col"><b><i className="fab fa-react"></i> React</b></div>
+                <div class="col"><b><i className="fab fa-angular"></i> Angular</b></div>
                 <div class="col"><b><i className="	fas fa-code"></i> Bootstrap</b></div>
+                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
+                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
                 <div class="col"><b><i className="fab fa-php"></i> PHP</b></div>
+                <div class="col"><b><i class='fab fa-python'></i> Python</b></div>
               </div>
             </div>
             <div className="mb-3">
               <h3>Projects</h3>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
-                <div><b>· Model Portfolio:</b> https://liana-unanyan.netlify.app/</div>
-                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
+                <div><b>· Mobile app project:</b> https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz</div>
                 <div><b>· Web Portfolio:</b> https://rafael-khismatulin.netlify.app/</div>
+                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
             </div>
           </div>
 
@@ -296,6 +299,9 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3 className="mb-2">Education</h3>
               <EducationList educations={state.educations} />
             </div>
+            <hr className="m-1" />
+            
+            <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub: </h4><p>https://github.com/DRAKONNN</p>
           </div>
         </div>
       </div>

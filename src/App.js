@@ -408,6 +408,7 @@ function App() {
         </section>
         <hr className="m-0" />
         
+        {/* Para alternar entre el CV en español e ingles, cambiar DocumentPdf por DocumentPdfEnglish */}
         <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
           <Modal.Header className="bg-dark" closeButton>
             <Modal.Title className="text-white">Previsualización del pdf</Modal.Title>

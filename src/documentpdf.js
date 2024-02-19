@@ -244,7 +244,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
 
   return (
     <div>
-      <div className="container-fluid p-3 mt-1">
+      <div className="container-fluid p-3 mt-0 pt-1">
         <div class="row">
           <div class="col-4 bg-dark text-white rounded">
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
@@ -300,6 +300,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <EducationList educations={state.educations} />
             </div>
             <hr className="m-1" />
+
             <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub: </h4><p>https://github.com/DRAKONNN</p>
           </div>
         </div>

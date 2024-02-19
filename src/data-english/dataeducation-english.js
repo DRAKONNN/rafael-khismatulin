@@ -1,5 +1,11 @@
 export default [{
   id: 'cf05', 
+  title: 'CISCO Cybersecurity course',
+  school: 'CISCO',
+  commencement: 'November 2023',
+  termination: 'December 2023',
+}, {
+  id: 'cf05', 
   title: 'iPhone and Angular programming course',
   school: 'Calderon Training Center',
   commencement: 'July 2022',
