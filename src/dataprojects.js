@@ -25,7 +25,7 @@ export default [{
   image: '/images/projects/StackoLinkedin.png',
   development: 'Desarrollada en: React y Bootstrap 5',
   urlGitHub: 'https://github.com/DRAKONNN/STACK-O',
-  url: 'https://stack-o.netlify.app/',
+  url: 'https://stackoo.netlify.app/',
   classAttBackgroundText: 'bg-primary text-white',
   classAttButton: 'btn-dark text-white',
 }];

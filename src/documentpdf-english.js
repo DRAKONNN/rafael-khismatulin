@@ -283,8 +283,8 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3>Projects</h3>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Mobile app project:</b> https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz</div>
-                <div><b>· Web Portfolio:</b> https://rafael-khismatulin.netlify.app/</div>
-                <div><b>· STACK'O:</b> https://stack-o.netlify.app/</div>
+                <div><b>· Web Portfolio:</b> https://rafaelkhismatulin.netlify.app/</div>
+                <div><b>· STACK'O:</b> https://stackoo.netlify.app/</div>
             </div>
           </div>
 
@@ -301,7 +301,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             </div>
             <hr className="m-1" />
             
-            <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub: </h4><p>https://github.com/DRAKONNN</p>
+            <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub </h4><p>https://github.com/DRAKONNN</p>
           </div>
         </div>
       </div>
