@@ -13,7 +13,7 @@ export default [{
   description: 'Support to the team by integrating into the dashboard design, updating and sending final information to the client.',
   logo: '/images/logos/Logo_BDS.png',
   commencement: 'December 2021',
-  termination: 'January 2022',
+  termination: 'May 2022',
 }, {
   id: 'fct02', 
   title: 'Mobile Application Developer',
@@ -21,5 +21,5 @@ export default [{
   description: 'Development of a mobile app for orders, testing, fixing bugs and API connection.',
   logo: '/images/logos/Logo_KubusSA.png',
   commencement: 'April 2021',
-  termination: 'June 2021',
+  termination: 'October 2021',
 }];
