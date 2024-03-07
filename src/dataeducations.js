@@ -1,11 +1,17 @@
 export default [{
+  id: 'cf04', 
+  title: 'Curso Fundamentos de Ciberseguridad',
+  school: 'UC3M & IDB',
+  commencement: 'Enero 2024',
+  termination: 'Marzo 2024',
+}, {
   id: 'cf05', 
   title: 'Curso de ciberseguridad de Cisco',
   school: 'Cisco',
   commencement: 'Noviembre 2023',
   termination: 'Diciembre 2023',
 }, {
-  id: 'cf05', 
+  id: 'cf06', 
   title: 'Curso de programación iPhone y Angular',
   school: 'Centro de Formación Calderón',
   commencement: 'Julio 2022',
@@ -28,10 +34,4 @@ export default [{
   school: 'Liceo Sorolla B',
   commencement: 'Septiembre 2016',
   termination: 'Junio 2018',
-}, {
-  id: 'conser01', 
-  title: 'Conservatorio Profesional de Música',
-  school: 'Conservatorio Teresa Berganza',
-  commencement: 'Octubre 2012',
-  termination: 'Mayo 2018',
 }];
