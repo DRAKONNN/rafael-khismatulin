@@ -20,7 +20,7 @@ export default [{
   id: 'cf06', 
   title: 'Curso de programación iPhone y Angular',
   school: 'Centro de Formación Calderón',
-  commencement: 'Julio 2022',
+  commencement: 'Junio 2022',
   termination: 'Julio 2022',
 }, {
   id: 'twt04', 

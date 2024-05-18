@@ -20,7 +20,7 @@ export default [{
   id: 'cf06', 
   title: 'iPhone and Angular programming course',
   school: 'Calderon Training Center',
-  commencement: 'July 2022',
+  commencement: 'June 2022',
   termination: 'July 2022',
 }, {
   id: 'twt04', 
@@ -30,7 +30,7 @@ export default [{
   termination: 'February 2022',
 }, {
   id: 'dam03', 
-  title: 'Higher Education of crossplatform application development',
+  title: 'Higher Ed. of crossplatform application development',
   school: 'IES Virgen de la Paloma',
   commencement: 'September 2019',
   termination: 'June 2021',

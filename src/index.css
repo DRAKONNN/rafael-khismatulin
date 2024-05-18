@@ -101,6 +101,10 @@ body {
   color: #6c757d;
 }
 
+.line-height-reduced {
+  line-height: 1.4;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;

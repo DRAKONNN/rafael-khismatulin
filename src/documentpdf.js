@@ -67,7 +67,7 @@ function Experience(props) {
               </div>
             </div>
           </div>
-          <p className="align-self-end">{experience.description}</p>
+          <p className="align-self-end line-height-reduced">{experience.description}</p>
         </div>
       </TimelineItem>
     </div>

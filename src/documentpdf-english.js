@@ -67,7 +67,7 @@ function Experience(props) {
               </div>
             </div>
           </div>
-          <p className="align-self-end">{experience.description}</p>
+          <p className="align-self-end line-height-reduced">{experience.description}</p>
         </div>
       </TimelineItem>
     </div>
@@ -286,7 +286,6 @@ const DocumentPdf = React.forwardRef((props, ref) => {
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Mobile app project:</b> https://play.google.com/store/apps/details?id=com.proyecto_agz.proyecto_agz</div>
                 <div><b>· Web Portfolio:</b> https://rafaelkhis.netlify.app/</div>
-                <div><b>· STACK'O:</b> https://stackoo.netlify.app/</div>
             </div>
           </div>
 

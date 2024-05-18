@@ -415,7 +415,7 @@ function App() {
             <button class="btn btn-primary shadow-item ms-3" type="button" onClick={generatePDF}>Descargar CV</button>
           </Modal.Header>
           <Modal.Body className="mt-0 p-0" ref={componentPdf}>
-            <DocumentPdfEnglish />
+            <DocumentPdf />
           </Modal.Body>
         </Modal>
 
