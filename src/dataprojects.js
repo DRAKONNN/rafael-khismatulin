@@ -1,6 +1,16 @@
 export default [{
+  id: 'ma01', 
+  title: "Musapp (2024)",
+  description: 'Plataforma de captación de socios.',
+  image: '/images/projects/Musapp.png',
+  development: 'Desarrollada en: Python y JavaScript',
+  urlGitHub: '',
+  url: '',
+  classAttBackgroundText: 'bg-light text-success',
+  classAttButton: 'btn-dark text-white',
+}, {
   id: 'mt01', 
-  title: "Mystery-Tales",
+  title: "Mystery-Tales (2023)",
   description: 'Proyecto web personal sobre historias de detectives y acertijos.',
   image: '/images/projects/MysteryTales.png',
   development: 'Desarrollada en: React y Bootstrap 5',
@@ -10,7 +20,7 @@ export default [{
   classAttButton: 'btn-dark text-white',
 }, {
   id: 'liana01', 
-  title: "Modelo Portfolio",
+  title: "Modelo Portfolio (2023)",
   description: 'Actualmente trabajando en un portfolio web para modelo.',
   image: '/images/projects/PortfolioLiana.png',
   development: 'Desarrollada en: React y Bootstrap 5',
@@ -20,7 +30,7 @@ export default [{
   classAttButton: 'btn-dark text-white',
 }, {
   id: 'stacko01', 
-  title: "STACK'O",
+  title: "STACK'O (2023)",
   description: 'Proyecto personal de una página web para filtrar diferentes juegos de cartas dependiendo del filtro que se necesite.',
   image: '/images/projects/StackoLinkedin.png',
   development: 'Desarrollada en: React y Bootstrap 5',

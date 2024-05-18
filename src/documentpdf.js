@@ -243,8 +243,8 @@ const DocumentPdf = React.forwardRef((props, ref) => {
   `;
 
   return (
-    <div>
-      <div className="container-fluid p-3 mt-0 pt-1">
+    <div className="m-0 p-0">
+      <div className="container-fluid p-3 mt-0 pt-0">
         <div class="row">
           <div class="col-4 bg-dark text-white rounded">
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
@@ -282,10 +282,11 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             </div>
             <div className="mb-3">
               <h3>Proyectos</h3>
+                <div><b>· Musapp:</b> plataforma de captación de socios</div>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Modelo Portfolio:</b> https://liana-unanyan.netlify.app/</div>
                 <div><b>· STACK'O:</b> https://stackoo.netlify.app/</div>
-                <div><b>· Web Portfolio:</b> https://rafaelkhismatulin.netlify.app/</div>
+                <div><b>· Web Portfolio:</b> https://rafaelkhis.netlify.app/</div>
             </div>
           </div>
 
@@ -300,9 +301,6 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3 className="mb-2 mt-2">Estudios</h3>
               <EducationList educations={state.educations} />
             </div>
-            <hr className="m-1" />
-
-            <h4 className="mb-2 mt-2"><i className="fab fa-github"></i> GitHub </h4><p>https://github.com/DRAKONNN</p>
           </div>
         </div>
       </div>

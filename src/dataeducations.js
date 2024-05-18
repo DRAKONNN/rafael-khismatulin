@@ -1,4 +1,10 @@
 export default [{
+  id: 'cf03', 
+  title: 'HTB Academy',
+  school: 'Hack The Box',
+  commencement: 'Abril 2024',
+  termination: 'Actualidad',
+}, {
   id: 'cf04', 
   title: 'Curso Fundamentos de Ciberseguridad',
   school: 'UC3M & IDB',

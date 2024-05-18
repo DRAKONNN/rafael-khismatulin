@@ -189,8 +189,8 @@ function Project(props) {
         <ul className="list-group list-group-flush">
           <li className={`list-group-item ${project.classAttBackgroundText} bg-gradient`}>{project.development}</li>
           <li className={`list-group-item ${project.classAttBackgroundText} bg-gradient`}>
-            <a href={project.urlGitHub} className={`btn ${project.classAttButton} me-2`}><i className="fab fa-github"></i> GitHub</a>
-            <a href={project.url} className={`btn btn-light text-dark ${project.classAttButton}`}><i className="fa fa-external-link"></i> URL</a>
+            <button onClick={() => window.open(project.urlGitHub)} className={`btn ${project.classAttButton} me-2`} disabled={!project.urlGitHub}><i className="fab fa-github"></i> GitHub</button>
+            <button onClick={() => window.open(project.url)} className={`btn btn-light text-dark ${project.classAttButton}`} disabled={!project.url}><i className="fa fa-external-link"></i> URL</button>
           </li>
         </ul>
       </div>
@@ -370,7 +370,7 @@ function App() {
               </div>
               <p className="lead mb-5 p-1 hover-zoom shadow-box fst-italic" >
                 <i class='fas fa-code'></i>{" "}
-                <ReactTyped strings={["Desarrollador Web y Mobile Apps"]} typeSpeed={100} loop/>
+                <ReactTyped strings={["Desarrollador Web y Mobile Apps", "Penetration Tester en Ciberseguridad"]} typeSpeed={100} loop/>
               </p>
               {isBreakpoint ? (
                 <>
@@ -414,8 +414,8 @@ function App() {
             <Modal.Title className="text-white">Previsualización del pdf</Modal.Title>
             <button class="btn btn-primary shadow-item ms-3" type="button" onClick={generatePDF}>Descargar CV</button>
           </Modal.Header>
-          <Modal.Body ref={componentPdf}>
-            <DocumentPdf />
+          <Modal.Body className="mt-0 p-0" ref={componentPdf}>
+            <DocumentPdfEnglish />
           </Modal.Body>
         </Modal>
 
@@ -462,25 +462,31 @@ function App() {
               <div className="subheading text-primary mb-3">Workflow</div>
               <ul className="fa-ul mb-0 col-8 hover-zoom border border-primary border-1 rounded-3 p-1 ms-0 shadow-box">
                 <li>
-                  <i className="fas fa-check text-success"></i> Mobile-First, Responsive
+                  <i className="fas fa-user-secret text-primary"></i> Pentesting y auditorías de seguridad
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i> Cross Browser Testing | Debugging
+                  <i className="fas fa-shield-alt text-primary"></i> Formación y concienciación a la ciberseguridad
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i>  Optimización de código
+                  <i className="fas fa-mobile-alt text-primary"></i> Mobile-First, Responsive
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i>  Trabajo en equipo
+                  <i className="fas fa-bug text-primary"></i> Cross Browser Testing | Debugging
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i>  Presentación de ideas e innovación
+                  <i className="fas fa-tools text-primary"></i>  Optimización de código
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i> Desarrollo ágil de software | Scrum
+                  <i className="fas fa-users text-primary"></i>  Trabajo en equipo
                 </li>
                 <li>
-                  <i className="fas fa-check text-success"></i>  Autodidacta
+                  <i className="fas fa-chart-line text-primary"></i>  Presentación de ideas e innovación
+                </li>
+                <li>
+                  <i className="fa fa-cog fa-spin text-primary"></i> Desarrollo ágil de software | Scrum
+                </li>
+                <li>
+                  <i className="fas fa-book text-primary"></i>  Autodidacta
                 </li>
               </ul>
             </div>

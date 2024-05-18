@@ -22,6 +22,7 @@ export default [{
   icon: 'fab fa-html5',
   classAttColor: 'orange',
   appearances: [
+    'Musapp',
     'Modelo Porfolio',
     'Mystery-Tales',
     'Portfolio',
@@ -34,6 +35,7 @@ export default [{
   icon: 'fab fa-css3-alt',
   classAttColor: 'blue',
   appearances: [
+    'Musapp',
     'Modelo Porfolio',
     'Mystery-Tales',
     'Portfolio',
@@ -46,6 +48,7 @@ export default [{
   icon: 'fab fa-js-square',
   classAttColor: 'yellow',
   appearances: [
+    'Musapp',
     'Modelo Porfolio',
     'Mystery-Tales',
     'Portfolio',
@@ -88,7 +91,7 @@ export default [{
   icon: 'fab fa-python',
   classAttColor: 'skyblue',
   appearances: [
-    'Sin experiencia',
+    'Musapp',
   ],
 }, {
   id: 'php09', 

@@ -1,4 +1,10 @@
 export default [{
+  id: 'cf03', 
+  title: 'HTB Academy',
+  school: 'Hack The Box',
+  commencement: 'April 2023',
+  termination: 'Present',
+}, {
   id: 'cf04', 
   title: 'Cybersecurity Fundamentals Course',
   school: 'UC3M & IDB',

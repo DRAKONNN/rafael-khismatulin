@@ -13,7 +13,7 @@ export default [{
   description: 'Support to the team by integrating into the dashboard design, updating and sending final information to the client.',
   logo: '/images/logos/Logo_BDS.png',
   commencement: 'December 2021',
-  termination: 'May 2022',
+  termination: 'January 2022',
 }, {
   id: 'fct02', 
   title: 'Mobile Application Developer',

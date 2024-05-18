@@ -13,7 +13,7 @@ export default [{
   description: 'Soporte al equipo integrándose en el diseño de cuadro de mando, actualización y envío de información final al cliente.',
   logo: '/images/logos/Logo_BDS.png',
   commencement: 'Diciembre 2021',
-  termination: 'Mayo 2022',
+  termination: 'Enero 2022',
 }, {
   id: 'fct02', 
   title: 'FCT Desarrollador de Aplicaciones Móviles',
