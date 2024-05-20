@@ -16,7 +16,7 @@ export default [{
   school: 'CISCO',
   commencement: 'November 2023',
   termination: 'December 2023',
-}, {
+},/*{
   id: 'cf06', 
   title: 'iPhone and Angular programming course',
   school: 'Calderon Training Center',
@@ -28,7 +28,7 @@ export default [{
   school: 'THE WHITE TEAM CONSULTING S.L.',
   commencement: 'January 2022',
   termination: 'February 2022',
-}, {
+}*/, {
   id: 'dam03', 
   title: 'Higher Ed. of crossplatform application development',
   school: 'IES Virgen de la Paloma',

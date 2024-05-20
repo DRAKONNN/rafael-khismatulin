@@ -21,7 +21,7 @@ export default [{
 }, {
   id: 'liana01', 
   title: "Modelo Portfolio (2023)",
-  description: 'Actualmente trabajando en un portfolio web para modelo.',
+  description: 'Portfolio web para modelo.',
   image: '/images/projects/PortfolioLiana.png',
   development: 'Desarrollada en: React y Bootstrap 5',
   urlGitHub: 'https://github.com/DRAKONNN/PortfolioLiana',

@@ -1,4 +1,12 @@
 export default [{
+  id: 'suma04', 
+  title: 'Desarrollador y Analista de Ciberseguridad',
+  company: 'SUMA F2F SL',
+  description: 'Desarrollo de código para plataformas web. Identificación y mitigación de vulnerabilidades de ciberseguridad.',
+  logo: '/images/logos/Logo_Sumaf2f.png',
+  commencement: 'Abril 2024',
+  termination: 'Actualidad',
+}, {
   id: 'ayuntamiento04', 
   title: 'Técnico Webmaster',
   company: 'Ayuntamiento de Pedrezuela',

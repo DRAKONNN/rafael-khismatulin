@@ -16,7 +16,7 @@ export default [{
   school: 'Cisco',
   commencement: 'Noviembre 2023',
   termination: 'Diciembre 2023',
-}, {
+},/*{
   id: 'cf06', 
   title: 'Curso de programación iPhone y Angular',
   school: 'Centro de Formación Calderón',
@@ -28,7 +28,7 @@ export default [{
   school: 'THE WHITE TEAM CONSULTING S.L.',
   commencement: 'Enero 2022',
   termination: 'Febrero 2022',
-}, {
+}*/, {
   id: 'dam03', 
   title: 'FP Superior de Desarrollo de Aplicaciones Multiplataforma',
   school: 'IES Virgen de la Paloma',

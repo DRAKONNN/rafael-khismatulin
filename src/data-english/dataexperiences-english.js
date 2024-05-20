@@ -1,4 +1,12 @@
 export default [{
+  id: 'suma04', 
+  title: 'Cybersecurity Developer and Analyst',
+  company: 'SUMA F2F SL',
+  description: 'Code development for web platforms. Identification and mitigation of cybersecurity vulnerabilities.',
+  logo: '/images/logos/Logo_Sumaf2f.png',
+  commencement: 'April 2024',
+  termination: 'Present',
+}, {
   id: 'ayuntamiento04', 
   title: 'Webmaster Technician',
   company: 'Pedrezuela City Council',
