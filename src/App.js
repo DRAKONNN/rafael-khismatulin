@@ -366,7 +366,7 @@ function App() {
             <div className={`resume-section-content`}>
               <h1>RAFAEL <span className="text-primary">KHISMATULIN</span></h1>
               <div className="subheading mb-5">
-                Madrid, 28039 Madrid · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
+                Madrid, 28039 · 60 100 58 38 · <a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a>
               </div>
               <p className="lead mb-5 p-1 hover-zoom shadow-box fst-italic" >
                 <i class='fas fa-code'></i>{" "}

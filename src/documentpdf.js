@@ -59,12 +59,9 @@ function Experience(props) {
           <div class="d-flex justify-content-between">
             <div class="flex-fill">
               <h6 class="mb-0">{experience.title}</h6>
-              <h6 class="text-primary mb-1">{experience.company}</h6>
-            </div>
-            <div class="flex-fill">
-              <div class="text-end">
-                <p class="text-primary">{experience.commencement} &ndash; {experience.termination}</p>
-              </div>
+              <h6 className="text-primary mb-1">
+                {experience.company} (<span style={{ textTransform: 'lowercase' }}>{experience.commencement} - {experience.termination}</span>)
+              </h6>
             </div>
           </div>
           <p className="align-self-end line-height-reduced">{experience.description}</p>
@@ -91,15 +88,20 @@ function Education(props) {
 
   return (
     <div key={education.id} className="d-flex flex-column flex-md-row justify-content-between mb-0 ms-3 timeline-item">
-      <TimelineItem>
-        <TimelineSeparator className='me-3'>
+      <TimelineItem style={{ marginBottom: '-6px' }}>
+        <TimelineSeparator className='me-3 ms-1'>
           <TimelineDot variant="outlined" color="primary" />
           <TimelineConnector style={{ background: '#4896FF' }} />
-        </TimelineSeparator> 
-        <div>
-          <h6 class="mb-0">{education.title}</h6>
-          <h6 class="text-primary mb-1">{education.school}</h6>
-          <p class="text-primary">{education.commencement} &ndash; {education.termination}</p>
+        </TimelineSeparator>
+        <div className="flex-grow-1">
+          <div class="d-flex justify-content-between">
+            <div class="flex-fill">
+              <h6 class="mb-0">{education.title}</h6>
+              <h6 className="text-primary mb-0">
+                {education.school} (<span style={{ textTransform: 'lowercase' }}>{education.commencement} - {education.termination}</span>)
+              </h6>
+            </div>
+          </div>
         </div>
       </TimelineItem>
     </div>
@@ -252,7 +254,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             </div>
             <h2>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h2>
             <div className="mb-3">
-              <h4>· Madrid, 28039 Madrid</h4>
+              <h4>· Madrid, 28039</h4>
               <h4>· 60 100 58 38</h4>
               <h4><a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a></h4>
             </div>
@@ -261,32 +263,34 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3>Idiomas</h3>
               <ul>
                 <li class="list-group-item"><b>- Español:</b> nativo</li>
-                <li class="list-group-item"><b>- Inglés:</b> conversación</li>
+                <li class="list-group-item"><b>- Inglés:</b> intermedio-alto</li>
                 <li class="list-group-item"><b>- Ruso:</b> nativo</li>
               </ul>
             </div>
             <div className="mb-3">
               <h3>Herramientas</h3>
-              <div className="row row-cols-2 ms-1">
+              <div className="row row-cols-2 ms-1 mb-2">
                 <div class="col"><b><i className="fab fa-java"></i> Java</b></div>
                 <div class="col"><b><i className="fab fa-android"></i> Android</b></div>
                 <div class="col"><b><i className="fab fa-js-square"></i> Javascript</b></div>
+                <div class="col"><b><i className="fab fa-java"></i> Spring</b></div>
                 <div class="col"><b><i className="fab fa-react"></i> React</b></div>
                 <div class="col"><b><i className="fab fa-angular"></i> Angular</b></div>
-                <div class="col"><b><i className="	fas fa-code"></i> Bootstrap</b></div>
-                <div class="col"><b><i className="fab fa-html5"></i> HTML</b></div>
-                <div class="col"><b><i className="fab fa-css3-alt"></i> CSS</b></div>
+                <div class="col"><b><i className="fab fa-html5"></i> HTML/CSS</b></div>
+                <div class="col"><b><i className="fas fa-code"></i> Bootstrap</b></div>
                 <div class="col"><b><i className="fab fa-php"></i> PHP</b></div>
                 <div class="col"><b><i class='fab fa-python'></i> Python</b></div>
               </div>
+
+              <div class="col"><b><i class='fas fa-car'></i> Vehículo propio</b></div>
+              <div class="col"><b><i class='fab fa-github-square'></i> github.com/DRAKONNN </b></div>
             </div>
             <div className="mb-3">
               <h3>Proyectos</h3>
                 <div><b>· Musapp:</b> plataforma de captación de socios</div>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Modelo Portfolio:</b> https://liana-unanyan.netlify.app/</div>
-                <div><b>· STACK'O:</b> https://stackoo.netlify.app/</div>
-                <div><b>· Web Portfolio:</b> https://rafaelkhis.netlify.app/</div>
+                <div><b>· Portfolio Web:</b> https://rafaelkhis.netlify.app/</div>
             </div>
           </div>
 
