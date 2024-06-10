@@ -252,11 +252,11 @@ const DocumentPdf = React.forwardRef((props, ref) => {
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
               <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
             </div>
-            <h2>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h2>
+            <h3>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h3>
             <div className="mb-3">
-              <h4>· Madrid, 28039</h4>
-              <h4>· 60 100 58 38</h4>
-              <h4><a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a></h4>
+              <h5>· Madrid, 28039</h5>
+              <h5>· 60 100 58 38</h5>
+              <h5 class="text-lowercase"><a href="mailto:rafakhis14@gmail.com">rafakhis14@gmail.com</a></h5>
             </div>
            
             <div className="mb-3">
@@ -281,17 +281,19 @@ const DocumentPdf = React.forwardRef((props, ref) => {
                 <div class="col"><b><i className="fab fa-php"></i> PHP</b></div>
                 <div class="col"><b><i class='fab fa-python'></i> Python</b></div>
               </div>
-
-              <div class="col"><b><i class='fas fa-car'></i> Own car</b></div>
-              <div class="col"><b><i class='fab fa-github-square'></i> github.com/DRAKONNN </b></div>
             </div>
 
             <div className="mb-3">
               <h3>Projects</h3>
-                <div><b>· Musapp:</b> partner recruitment platform</div>
+                <div><b>· Web Portfolio:</b> https://rafaelkhis.netlify.app/</div>
                 <div><b>· Mystery-Tales:</b> https://mysterytales.netlify.app/</div>
                 <div><b>· Portfolio model:</b> https://liana-unanyan.netlify.app/</div>
-                <div><b>· Web Portfolio:</b> https://rafaelkhis.netlify.app/</div>
+            </div>
+            <div className="mb-1">
+              <h3>Additional</h3>
+              <div class="col"><b><i class='fas fa-music'></i> Prof. Violin Conservatory </b></div>
+              <div class="col"><b><i class='fab fa-github-square'></i> github.com/DRAKONNN </b></div>
+              <div class="col"><b><i class='fas fa-car'></i> Own car</b></div>
             </div>
           </div>
 
