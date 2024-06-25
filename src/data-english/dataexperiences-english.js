@@ -4,7 +4,7 @@ export default [{
   company: 'SUMA F2F SL',
   description: 'Development and debugging of web platforms. Identification and mitigation of cybersecurity vulnerabilities.',
   logo: '/images/logos/Logo_Sumaf2f.png',
-  commencement: 'Apr 2024',
+  commencement: 'Mar 2024',
   termination: 'Present',
 }, {
   id: 'ermitagemuscial04', 
@@ -12,7 +12,7 @@ export default [{
   company: 'Ermitage Musical SL',
   description: 'Risk assessment, implementation of proactive security measures and incident response.',
   logo: '/images/logos/Logo_ErmitageMusical.png',
-  commencement: 'Sep 2023',
+  commencement: 'Aug 2023',
   termination: 'Mar 2024',
 }, {
   id: 'ayuntamiento04', 

@@ -2,7 +2,7 @@ export default [{
   id: 'cf03', 
   title: 'HTB Academy',
   school: 'Hack The Box',
-  commencement: 'Abr 2024',
+  commencement: 'Sept 2023',
   termination: 'Actualidad',
 }, {
   id: 'cf04', 
@@ -14,8 +14,8 @@ export default [{
   id: 'cf05', 
   title: 'Curso de ciberseguridad de Cisco',
   school: 'Cisco',
-  commencement: 'Nov 2023',
-  termination: 'Dic 2023',
+  commencement: 'Oct 2023',
+  termination: 'Nov 2023',
 },/*{
   id: 'cf06', 
   title: 'Curso de programación iPhone y Angular',
