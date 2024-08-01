@@ -263,8 +263,8 @@ const DocumentPdf = React.forwardRef((props, ref) => {
               <h3>Languages</h3>
               <ul>
                 <li class="list-group-item"><b>- Spanish:</b> native level</li>
-                <li class="list-group-item"><b>- English:</b> conversation level</li>
-                <li class="list-group-item"><b>- Russian:</b> native level</li>
+                <li class="list-group-item"><b>- English:</b> B2 level</li>
+                <li class="list-group-item"><b>- Russian:</b> C1 level</li>
               </ul>
             </div>
             <div className="mb-3">
