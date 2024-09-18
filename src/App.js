@@ -13,6 +13,7 @@ import projects from './dataprojects';
 import interests from './datainterests';
 import DocumentPdf from './documentpdf';
 import DocumentPdfEnglish from './documentpdf-english';
+import DocumentPdfDriver from './documentpdf-driver';
 
 import { ReactToPrint, useReactToPrint } from "react-to-print";
 
@@ -408,7 +409,7 @@ function App() {
         </section>
         <hr className="m-0" />
         
-        {/* Para alternar entre el CV en español e ingles, cambiar DocumentPdf por DocumentPdfEnglish */}
+        {/* Para alternar los CVs: DocumentPdf DocumentPdfEnglish DocumentPdfDriver */}
         <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
           <Modal.Header className="bg-dark" closeButton>
             <Modal.Title className="text-white">Previsualización del pdf</Modal.Title>
