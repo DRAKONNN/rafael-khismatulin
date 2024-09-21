@@ -250,7 +250,7 @@ const DocumentPdf = React.forwardRef((props, ref) => {
         <div class="row">
           <div class="col-4 bg-dark text-white rounded">
             <div className="img-zoom img-profile rounded mx-auto mt-2 mb-2">
-              <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+              <img className="img-fluid" src="/images/Rafa_Profile2024.jpg" alt="Rafael Khismatulin Pivnenko" />
             </div>
             <h3>RAFAEL <span className="text-primary">KHISMATULIN PIVNENKO</span></h3>
             <div className="mb-3">

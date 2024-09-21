@@ -344,7 +344,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
           <div className="img-zoom img-profile rounded mx-auto mb-2">
-            <img className="img-fluid" src="/images/profile.png" alt="Rafael Khismatulin Pivnenko" />
+            <img className="img-fluid" src="/images/Rafa_Profile2024.jpg" alt="Rafael Khismatulin Pivnenko" />
           </div>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
