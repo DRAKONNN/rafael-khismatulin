@@ -12,7 +12,7 @@ export default [{
   company: 'Ermitage Musical SL',
   description: 'Evaluación de riesgos, implementación de medidas de seguridad proactivas y respuesta a incidentes.',
   logo: '/images/logos/Logo_ErmitageMusical.png',
-  commencement: 'Aug 2023',
+  commencement: 'Oct 2023',
   termination: 'Mar 2024',
 }, {
   id: 'ayuntamiento04', 
